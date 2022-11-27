@@ -244,7 +244,7 @@ def greedy_algoritem(trikotniki):
         printanje(spremeni_mesto_trikotnika(lok_trikotniki[index],greedy_trikotniki,i)) #
 #        print(lok_dolzina,lok_dolzina[index],index)
         narisi_trikotnike(iz_slovarja_doloci_polozaj_noge_nazaj_v_slovar(spremeni_mesto_trikotnika(lok_trikotniki[index],greedy_trikotniki,i))) #
-        print("===================")
+        print("===================") #
     print("rezultat") #
     narisi_trikotnike(opt_trikotniki[-1])
     return opt_trikotniki[-1]

@@ -195,12 +195,70 @@ def brute_force(trikotniki):
     najboljsa_permutacija = parmutacija[index]
     return iz_slovarja_doloci_polozaj_noge_nazaj_v_slovar(apply_permutacijo_na_trikotnike(najboljsa_permutacija,trikotniki1))
     
+def spremeni_mesto_trikotnika(mesto,trikotniki,trikotnik):
+    """
+    Vzame trikotnik in ga postavi na željeno mesto
+    """
+    mesto_trikotnika = trikotniki[trikotnik]["vrstni_red"]
+    if mesto == mesto_trikotnika:
+        return trikotniki
+    else:
+        for i in range(len(trikotniki)):
+            if i == trikotnik:
+                trikotniki[trikotnik]["vrstni_red"] = mesto 
+            elif mesto>mesto_trikotnika and trikotniki[i]["vrstni_red"] <= mesto and trikotniki[i]["vrstni_red"]>= mesto_trikotnika:
+                trikotniki[i]["vrstni_red"] = trikotniki[i]["vrstni_red"]-1
+            elif mesto < mesto_trikotnika and trikotniki[i]["vrstni_red"] <= mesto_trikotnika and trikotniki[i]["vrstni_red"] >= mesto:
+                trikotniki[i]["vrstni_red"] = trikotniki[i]["vrstni_red"]+1
+        return trikotniki
+
+def printanje(trikotniki):
+    for i in range(len(trikotniki)):
+        print(f"""trikotnik {i} ja na mestu""",trikotniki[i]["vrstni_red"])
+
+def greedy_algoritem(trikotniki):
+    greedy_trikotniki = dict()
+    opt_dolzina = []
+    opt_trikotniki = []
+    for i in range(len(trikotniki)):
+        if i > 0:
+            greedy_trikotniki = opt_trikotniki[i-1]
+        greedy_trikotniki[i] = trikotniki[i]
+        lok_dolzina=[]
+        lok_trikotniki=[]
+
+        for j in range(len(greedy_trikotniki)):
+            trikotniki1 = spremeni_mesto_trikotnika(j,greedy_trikotniki,i)
+            dolocene_noge = iz_slovarja_doloci_polozaj_noge_nazaj_v_slovar( trikotniki1)
+            lok_dolzina.append(dolzina_urnika(dolocene_noge))
+            lok_trikotniki.append(j)
+#            printanje(dolocene_noge)
+            dolzina = dolzina_urnika(dolocene_noge) #
+            print(f"{i} na mestu {j} z dolzino { dolzina }") #
+            narisi_trikotnike(dolocene_noge) #
+
+        index = lok_dolzina.index(min(lok_dolzina))    
+        opt_dolzina.append(lok_dolzina[index])
+        opt_trikotniki.append(iz_slovarja_doloci_polozaj_noge_nazaj_v_slovar(spremeni_mesto_trikotnika(lok_trikotniki[index],greedy_trikotniki,i)))
+        print("---------------") #
+        printanje(spremeni_mesto_trikotnika(lok_trikotniki[index],greedy_trikotniki,i)) #
+#        print(lok_dolzina,lok_dolzina[index],index)
+        narisi_trikotnike(iz_slovarja_doloci_polozaj_noge_nazaj_v_slovar(spremeni_mesto_trikotnika(lok_trikotniki[index],greedy_trikotniki,i))) #
+        print("===================")
+    print("rezultat") #
+    narisi_trikotnike(opt_trikotniki[-1])
+    return opt_trikotniki[-1]
 
 
 #test = naredi_trikotnike(10,[1,2,1,10,1,1,1,20,4,1])
-test =  naredi_trikotnike(6)
+test =  naredi_trikotnike(10,zgornja_meja=100)
+#narisi_trikotnike(iz_slovarja_doloci_polozaj_noge_nazaj_v_slovar(test))
+greedy_algoritem(test)
+#narisi_trikotnike(test)
+#spremeni_mesto_trikotnika(1,test,4)
+
 #narisi_trikotnike( iz_seznama_v_slovar( doloci_polozaj_noge_glede_na_vrstni_red( razvrsti_v_seznam_glede_na_vrstni_red( test ) ) ) )
 #narisi_trikotnike(iz_slovarja_doloci_polozaj_noge_nazaj_v_slovar(test))
-brut = brute_force(naredi_trikotnike(6))
-narisi_trikotnike(brute_force(naredi_trikotnike(8 , zgornja_meja=50)))
+##brut = brute_force(naredi_trikotnike(6))
+#narisi_trikotnike(brute_force(test))
 #narisi_trikotnike( iz_seznama_v_slovar( doloci_polozaj_noge_glede_na_vrstni_red( razvrsti_v_seznam_glede_na_vrstni_red( brut ) ) ) )        

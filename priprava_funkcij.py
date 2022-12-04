@@ -9,6 +9,9 @@ from sympy import symbols, solve
 from itertools import count, permutations 
 import math
 import copy
+from pyomo.environ import * 
+from pyomo.opt import SolverFactory
+import os
 
 def naredi_trikotnik(dolzina=None,spodnja_meja=1,zgornja_meja=10,celostevilski=True):
     """ 
@@ -191,6 +194,7 @@ def brute_force(trikotniki):
         parmutacija.append(i)
     index = dolzina.index(min(dolzina))
     najboljsa_permutacija = parmutacija[index]
+    narisi_trikotnike(iz_slovarja_doloci_polozaj_noge_nazaj_v_slovar(apply_permutacijo_na_trikotnike(najboljsa_permutacija,trikotniki1)))
     return iz_slovarja_doloci_polozaj_noge_nazaj_v_slovar(apply_permutacijo_na_trikotnike(najboljsa_permutacija,trikotniki1))
     
 def spremeni_mesto_trikotnika(mesto,trikotniki,trikotnik):
@@ -220,7 +224,7 @@ def greedy_algoritem(trikotniki,prikaz_simulacije=False):
     * V prvi zanki doda slovarju greedy_trikotniki trikotnik iz seznama vseh trikotnikov in hkrati beleži optimalne lokalne podatke
     * V drugi zanki preizkusi vse možne izbire, kam lahko vtakne novi trikotnik in si zabeleži tisto izbiro, ki je lokalno optimalna
     * Nariše in vrne trikotnike urejene z Greedy algoritmom
-    * Zahtevnost cca. (št. trikotnikov)^2
+    * Zahtevnost cca. c*(št. trikotnikov)^2
     """
     greedy_trikotniki = dict()
     opt_dolzina = []
@@ -257,37 +261,63 @@ def greedy_algoritem(trikotniki,prikaz_simulacije=False):
         narisi_trikotnike(opt_trikotniki[-1])
     return opt_trikotniki[-1]
 
-def uredi_trikotnike_po_velikosti(trikotniki):
-    pass
 
 
-def nadgrajeni_greedy(trikotniki):
-    trikotniki_urejeni_po_greedy = greedy_algoritem( copy.deepcopy(trikotniki))
-    razlike=[]
-    bi_lahko_dali_noter=[]
-    for i in range(len(trikotniki_urejeni_po_greedy)-1):
-        razlike.append( (trikotniki_urejeni_po_greedy[i]["polozaj_noge"]+trikotniki_urejeni_po_greedy[i]["dolzina"]-trikotniki_urejeni_po_greedy[i+1]["polozaj_noge"])/2 )
-    for i in range(len(trikotniki_urejeni_po_greedy)-1):
-        pass
 
-    #return trikotniki_urejeni_po_greedy
+os.environ['NEOS_EMAIL'] = 'kgustavo.c.lopese@volknakone.tk'
+
+def linearno_programiranje(trikotniki):
+    """
+    * Poišče optimalne položaje nog trikotnikov
+    * Nariše in vrne trikotnike, katerim ni določen vrstni red, zgolj položaj nog
+    """
+    kriticnost_trikotnikov = []
+    for _ in range(len(trikotniki)):
+        kriticnost_trikotnikov.append(trikotniki[_]["dolzina"])
+    T = sum(kriticnost_trikotnikov)
+    CLP = ConcreteModel()
+    CLP.t = Var(domain=NonNegativeReals)
+    CLP.I = Set(initialize=range(len(kriticnost_trikotnikov)))
+    CLP.J = Set(initialize=range(len(kriticnost_trikotnikov)))
+    CLP.select_combos = Set(within = CLP.I * CLP.J, )
+    CLP.s = Var(CLP.I,domain=NonNegativeReals)
+    CLP.X = Var(CLP.I, CLP.J, domain=Boolean)
+    CLP.constraints = ConstraintList()
+    CLP.profit = Objective(expr = CLP.t , sense=minimize)
+    for i, d in enumerate(kriticnost_trikotnikov):
+        CLP.constraints.add(CLP.s[i] >= 0)
+        CLP.constraints.add(CLP.s[i] + d <= CLP.t)
+        for j, e in enumerate(kriticnost_trikotnikov[i+1:],i+1):
+            m = min(d, e)
+            CLP.constraints.add(CLP.X[i,j]+CLP.X[j,i]==1)
+            CLP.constraints.add(CLP.s[j]-CLP.s[i]>=m-T*CLP.X[i,j])
+            CLP.constraints.add(CLP.s[i]-CLP.s[j]>=m-T*CLP.X[j,i])
+    solver_manager = SolverManagerFactory('neos')
+    results = solver_manager.solve(CLP, opt='cplex')
+    polozaj_nog = []
+    count = 0
+    for v in CLP.component_data_objects(Var, active=True):
+        if count == len(trikotniki)+1:
+            break
+        elif count == 0:
+            count=count+1
+        else:
+            count=count+1
+            polozaj_nog.append(value(v))
+    for z in range(len(trikotniki)):
+        trikotniki[z]["polozaj_noge"] = polozaj_nog[z]
+    narisi_trikotnike(trikotniki)
+    return trikotniki
+
 
 test = naredi_trikotnike(9,[20,20,10,4,4,4,4,5,5])
-
-#test =  naredi_trikotnike(10,zgornja_meja=100,celostevilski=False)
 test1 = copy.deepcopy(test)
 test2 = copy.deepcopy(test)
-#dolzina_urnika(brute_force(test)))
-#print("greedy: ",dolzina_urnika(greedy_algoritem(test1)))
-#print("nadgrajeni greedy:",dolzina_urnika(nadgrajeni_greedy(test2)))
-#print("opt: ",dolzina_urnika(brute_force(test)))    
-#narisi_trikotnike(iz_slovarja_doloci_polozaj_noge_nazaj_v_slovar(test))
-#test1 = greedy_algoritem(test,True)
-#narisi_trikotnike(test1)
-#spremeni_mesto_trikotnika(1,test,4)
 
-#narisi_trikotnike( iz_seznama_v_slovar( doloci_polozaj_noge_glede_na_vrstni_red( razvrsti_v_seznam_glede_na_vrstni_red( test ) ) ) )
-#narisi_trikotnike(iz_slovarja_doloci_polozaj_noge_nazaj_v_slovar(test))
-##brut = brute_force(naredi_trikotnike(6))
-#narisi_trikotnike(brute_force(test))
-#narisi_trikotnike( iz_seznama_v_slovar( doloci_polozaj_noge_glede_na_vrstni_red( razvrsti_v_seznam_glede_na_vrstni_red( brut ) ) ) )        
+# greedy_algoritem(test2)
+
+# linearno_programiranje(test)
+
+# brute_force(test1)
+
+

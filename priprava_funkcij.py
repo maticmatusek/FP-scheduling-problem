@@ -310,7 +310,9 @@ def linearno_programiranje(trikotniki):
     return trikotniki
 
 
-test = naredi_trikotnike(9,[20,20,10,4,4,4,4,5,5])
+#test = naredi_trikotnike(9,[20,20,10,4,4,4,4,5,5])
+
+test = naredi_trikotnike(5,zgornja_meja=50)
 test1 = copy.deepcopy(test)
 test2 = copy.deepcopy(test)
 
@@ -318,6 +320,6 @@ test2 = copy.deepcopy(test)
 
 # linearno_programiranje(test)
 
-# brute_force(test1)
+# brute_force(test1) 251
 
 

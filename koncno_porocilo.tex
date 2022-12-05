@@ -60,12 +60,12 @@ Trikotnike postavimo, z nogo na $x$-os, na sledeči način.
    \includegraphics[width=8cm, height=4cm]{primer_trikotnikov.png} 
 \end{center}
 
-Trikotniki morajo biti postavljeni tako, da je hipotenuza trikotnika naraščajoča glede na $x$-os. \\
+Trikotniki morajo biti postavljeni tako, da je hipotenuza trikotnika naraščajoča glede na $x$-os, natančneje naklon hipotenuze je enak 1. \\
 Želimo si trikotnike postaviti tako, da je dolžina teh trikotnikov najkrajša. Trikotniki se med seboj ne smejo prekrivati,
 prav tako pa mora biti krak noge pravokoten na $x$-os.
 
 \subsection{Uporabnost}
-Pomembno je, da znamo ta matematični problem interpretirati praktično. \\
+Pomembno je, da znamo ta matematični problem interpretirati v praksi. \\
 Torej:
 \begin{itemize}
     \item pravokotni enakokraki trikotniki $=$ opravila,
@@ -87,8 +87,26 @@ Reševanja najinega problema sva se lotila s pomočjo treh algoritmov:
 
 \subsection{Brute force algoritem}
 \subsubsection{Opis algoritma}
+Algoritem iz n trikotnikov sestavi vse možne permutacije in izračuna njihovo dolžino. Nato 
+pa izbire prvo permutacijo na katero je naletel, ki je imela minimalno dolžino.
 \subsubsection{Psevdokoda}
-\subsubsection{Predstavitev rezultatov}
+\begin{verbatim}
+    1.    Vhod: trikotniki
+    2.    n = length(trikotniki)
+    3.    dolzina_urnika = []
+        perutacije = permutations( [0, 1, ..., n-1] )
+        for i in permutacije
+            for j in 0:(n-1)
+                trikotnik["vrstni_red"][j] = permutacija[j]
+            dolzina_urnika.append( dolzina(trikotniki) )
+        index = dolzina_urnika.index( min(dolzina_urnika) )
+        for i in 0:(n-1)
+            trikotniki[i]["vrstni red"] = permutacije[index][i]
+        Izhod: trikotniki
+
+\end{verbatim}
+
+
 
 
 \subsection{Greedy algoritem}
@@ -110,8 +128,78 @@ Na naslednji sliki prikažemo primer, ko Greedy ni optimalen. Greedy algoritem (
 Hitrost Greedy algoritma je polinomska. Da se pokazati, da je aproksimacijsko razmerje zgornje meje točnosti Greedy algoritma $1.5$ optimalnega časa. Torej, če je optimalni čas določenega primerna
 $40$ časovnih enot, potem Greedy pokaže največ $60$ časovnih enot.
 
+\subsubsection{Psevdokoda}
+\begin{verbatim}
+    Vhod: trikotniki
+    n = length(trikotniki)
+    trikotniki_lokalno = dict()
+    for i in 0:(n-1)
+        trikotniki_lokalno[i] = trikotniki[i]
+        m = length(trikotniki_lokalno)
+        lokalna_dolzina_urnika = []
+        for j in 0:(m-1):
+            trikotniki_lokalno[i]["vrstni_red"] = j
+            *popravi_mesta_ostalim_trikotnikom
+            lokalna_dolzina_urnika.append( dolzina_urnika(trikotniki_lokalno) )
+        index = lokalna_dolzina_urnika.index( min(lokalna_dolzina_urnika) )
+        trikotniki_lokalno[i]["vrstni_red"] = index
+        *popravi_mesta_ostalim_trikotnikom
+    Izhod: trikotniki_lokalno
+
+\end{verbatim}
 
 
+Tukaj opisat popravi\_mesta...
+
+%\subsubsection{Predsatvitev rezultatov}
+
+%\subsection{Clp}
+%\subsubsection{Opis algoritma}
+\subsubsection{Psevdokoda}
+\begin{verbatim}
+    Vhod: seznam_dolzin_trikotnikov
+    T = sum(seznam_dolzin_trikotnikov)
+    t = new_variable()
+    s = new_variable()
+    x = new_variable(binary = True)
+    set_objective(t, maximization = False)
+    for i, d in enumerate(seznam_dolzin_trikotnikov)
+        add_constraint(s[i] >= 0)
+        add_constraint(s[i] + d <= t)
+        for j, e in enumerate(seznam_dolzin_trikotnikov[i+1:], i+1):
+            m = min(d, e)
+            add_constraint(x[i, j]+x[j, i] = 1)
+            add_constraint(s[i] - s[j] >= m - T*x[j, i])
+            add_constraint(s[j] - s[i] >= m - T*x[i, j])
+    Izhod: seznam s
+\end{verbatim}
+v seznamu s so napisani položaji nog trikotnikov
+
+\subsection{Generiranje podatkov}
+
+\subsection{Predstavitev rezultatov}
+\begin{verbatim}
+    test = naredi_trikotnike(
+                9,
+                [ 
+                44.513033703890834,
+                18.613265453372076,
+                27.04233495394404,
+                29.803779538038164,
+                38.01467639495788,
+                43.53220098011497,
+                13.90897209250403,
+                26.415619884578483,
+                49.01780933958118
+                ]
+            )
+\end{verbatim}
+
+seznam trikotnikov, ime algoritma, več optimalnih razporeditev 
+število optimalnih rešitev 72. \\
+\includegraphics[]{sim_brut.png}
+\includegraphics[]{sim_clp.png}
+\includegraphics[]{sim_greedy.png}
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.26)  5 DEC 2022 11:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.26)  5 DEC 2022 15:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -272,30 +272,74 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 71
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [3 <./primer_trikotnikov.png>]
-<greedy.png, id=21, 478.03593pt x 94.10156pt>
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 93.
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [4]
+<greedy.png, id=25, 478.03593pt x 94.10156pt>
 File: greedy.png Graphic file (type png)
 <use greedy.png>
-Package pdftex.def Info: greedy.png  used on input line 103.
+Package pdftex.def Info: greedy.png  used on input line 121.
 (pdftex.def)             Requested size: 369.88318pt x 85.36403pt.
- [4 <./greedy.png>]
-<primer_neoptimalnosti_greedy.png, id=28, 466.74374pt x 131.74219pt>
+<primer_neoptimalnosti_greedy.png, id=26, 466.74374pt x 131.74219pt>
 File: primer_neoptimalnosti_greedy.png Graphic file (type png)
 <use primer_neoptimalnosti_greedy.png>
-Package pdftex.def Info: primer_neoptimalnosti_greedy.png  used on input line 108.
+Package pdftex.def Info: primer_neoptimalnosti_greedy.png  used on input line 126.
 (pdftex.def)             Requested size: 284.53522pt x 85.36201pt.
- [5 <./primer_neoptimalnosti_greedy.png>] (koncno_porocilo.aux) ) 
+ [5 <./greedy.png> <./primer_neoptimalnosti_greedy.png>]
+Overfull \hbox (97.82524pt too wide) in paragraph at lines 149--149
+[]            \T1/lmtt/m/n/12 lokalna_dolzina_urnika.append( dolzina_urnika(trikotniki_lokalno) )[] 
+ []
+
+
+Overfull \hbox (73.12523pt too wide) in paragraph at lines 149--149
+[]        \T1/lmtt/m/n/12 index = lokalna_dolzina_urnika.index( min(lokalna_dolzina_urnika) )[] 
+ []
+
+
+Overfull \hbox (29.9002pt too wide) in paragraph at lines 175--175
+[]        \T1/lmtt/m/n/12 for j, e in enumerate(seznam_dolzin_trikotnikov[i+1:], i+1):[] 
+ []
+
+[6]
+<sim_brut.png, id=37, 402.5439pt x 123.5817pt>
+File: sim_brut.png Graphic file (type png)
+<use sim_brut.png>
+Package pdftex.def Info: sim_brut.png  used on input line 200.
+(pdftex.def)             Requested size: 402.54291pt x 123.58138pt.
+<sim_clp.png, id=38, 396.0396pt x 124.3044pt>
+File: sim_clp.png Graphic file (type png)
+<use sim_clp.png>
+Package pdftex.def Info: sim_clp.png  used on input line 201.
+(pdftex.def)             Requested size: 396.03862pt x 124.30408pt.
+<sim_greedy.png, id=39, 389.5353pt x 114.9093pt>
+File: sim_greedy.png Graphic file (type png)
+<use sim_greedy.png>
+Package pdftex.def Info: sim_greedy.png  used on input line 202.
+(pdftex.def)             Requested size: 389.53433pt x 114.90901pt.
+
+Overfull \hbox (12.54291pt too wide) in paragraph at lines 198--203
+[]
+ []
+
+
+Overfull \hbox (6.03862pt too wide) in paragraph at lines 198--203
+[]
+ []
+
+[7 <./sim_brut.png> <./sim_clp.png> <./sim_greedy.png>] (koncno_porocilo.aux) ) 
 Here is how much of TeX's memory you used:
- 4168 strings out of 478582
- 66137 string characters out of 2844816
- 361782 words of memory out of 3000000
- 22287 multiletter control sequences out of 15000+600000
- 500963 words of font info for 53 fonts, out of 8000000 for 9000
+ 4232 strings out of 478582
+ 67191 string characters out of 2844816
+ 366782 words of memory out of 3000000
+ 22344 multiletter control sequences out of 15000+600000
+ 501281 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,5n,62p,365b,238s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on koncno_porocilo.pdf (5 pages, 159203 bytes).
+ 55i,5n,62p,365b,272s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
+Output written on koncno_porocilo.pdf (7 pages, 225199 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
+ 90 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

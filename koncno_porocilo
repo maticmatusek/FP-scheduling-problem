@@ -1,0 +1,39 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage{float}
+\usepackage{url}
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{graphicx}
+\usepackage{amssymb}
+
+\newcommand{\pojem}[1]{\underline{\textsc{#1}}}
+
+\theoremstyle{definition}
+\newtheorem{definicija}{Definicija}
+
+\theoremstyle{plain}
+\newtheorem{izrek}{Izrek}
+
+\newenvironment{dokaz}{\begin{proof}[Dokaz izreka]}{\end{proof}}
+
+
+
+
+\begin{document}
+
+\begin{titlepage}
+
+\title{The triangle scheduling problem}
+\author{Arh Blaž, Matušek Matic}
+\date{9.\ 11.\ 2022}
+\maketitle   
+\thispagestyle{empty}
+\end{titlepage}
+
+
+\end{document}

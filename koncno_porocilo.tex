@@ -1,4 +1,3 @@
-
 \documentclass[a4paper,12pt]{article}
 \usepackage[slovene]{babel}
 \usepackage[utf8]{inputenc}
@@ -10,6 +9,7 @@
 \usepackage[]{amsthm}
 \usepackage[]{graphicx}
 \usepackage{amssymb}
+
 
 \newcommand{\pojem}[1]{\underline{\textsc{#1}}}
 
@@ -65,8 +65,8 @@ Trikotniki morajo biti postavljeni tako, da je hipotenuza trikotnika naraščajo
 prav tako pa mora biti krak noge pravokoten na $x$-os.
 
 \subsection{Uporabnost}
-Pomembno je, da znamo ta matematični problem interpretirati v praksi. \\
-Torej:
+Pomembno je, da znamo ta matematični problem interpretirati v praksi. Trikotnike lahko interpretiramo kot opravila na našem urnike. Radi bi minimizirali trajanje našega urnika, medtem ko bi radi prioritizirali bolj kritična oziroma pomembna opravila.
+Tako je torej:
 \begin{itemize}
     \item pravokotni enakokraki trikotniki $=$ opravila,
     \item dolžina kraka $=$ pomembnost opravila.
@@ -78,12 +78,9 @@ pomembnejšega opravila (večjega trikotnika), manj pomembno opravilo  izpustimo
 
 
 \section{Reševanje problema s pomočjo različnih algoritmov}
-Reševanja najinega problema sva se lotila s pomočjo treh algoritmov:
-\begin{itemize}
-    \item bruteforce algoritem
-    \item Greedy algoritem
-    \item algoritem, ki s pomočjo celoštevilškega lineranega programiranja išče optimalno rešitev.
-\end{itemize}
+V znanstvenem članku The triangle scheduling problem \cite{triangle} je za reševanje problema predlagan Greedy algoritem. Pred Greedy algoritmom, sva se odločila sprogramirati brute force algoritem, ki je nekoliko manj težaven, je pa zelo časovno zahteven. 
+Nato sva napisala Greedy algoritem, ki ima nizko časovno zahtevnost vendar ne vrne optimalnega rezultata. Ker Greedy algoritem ne vrne optimuma, sva za konec napisala tudi optimalen algoritem, kjer sva uporabila celoštevilsko linearno programiranje, ki je manj časovno zahteven kot brute force.
+
 
 \subsection{Brute force algoritem}
 \subsubsection{Opis algoritma}
@@ -197,11 +194,28 @@ v seznamu s so napisani položaji nog trikotnikov
 
 seznam trikotnikov, ime algoritma, več optimalnih razporeditev 
 število optimalnih rešitev 72. \\
-\includegraphics[]{sim_brut.png}
-\includegraphics[]{sim_clp.png}
-\includegraphics[]{sim_greedy.png}
+
+\begin{itemize}
+    \item Bruteforce algoritem
+\end{itemize}    
+    \includegraphics[]{sim_brut.png}
+    \begin{itemize}
+    \item Celoštevilsko linearno programiranje
+\end{itemize}    
+    \includegraphics[]{sim_clp.png}
+    \begin{itemize}
+    \item Greedy algoritem
+\end{itemize}    
+    \includegraphics[]{sim_greedy.png}
 
 
+    \begin{thebibliography}{9}
 
+
+        
+        \bibitem{triangle}
+          Dürr, C., Hanzálek, Z., Konrad, C. et al. The triangle scheduling problem. J Sched 21, 305-312 (2018).
+
+        \end{thebibliography}
 
 \end{document}

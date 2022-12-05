@@ -315,6 +315,9 @@ def linearno_programiranje(trikotniki):
 # SIMULACIJA:  
 test = naredi_trikotnike(9,[44.513033703890834,18.613265453372076,27.04233495394404,29.803779538038164,38.01467639495788,43.53220098011497,13.90897209250403,26.415619884578483,49.01780933958118])
 #test = naredi_trikotnike(9,zgornja_meja=50,celostevilski=False )
+#test = naredi_trikotnike(9,[20,20,10,4,4,4,4,5,5])
+
+test = naredi_trikotnike(5,zgornja_meja=50)
 test1 = copy.deepcopy(test)
 test2 = copy.deepcopy(test)
 

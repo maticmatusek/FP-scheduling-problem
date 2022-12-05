@@ -1,0 +1,11 @@
+\babel@toc {slovene}{}\relax 
+\contentsline {section}{\numberline {1}Uvod}{3}{}%
+\contentsline {subsection}{\numberline {1.1}Navodilo naloge}{3}{}%
+\contentsline {subsection}{\numberline {1.2}Uporabnost}{3}{}%
+\contentsline {section}{\numberline {2}Reševanje problema s pomočjo različnih algoritmov}{4}{}%
+\contentsline {subsection}{\numberline {2.1}Brute force algoritem}{4}{}%
+\contentsline {subsubsection}{\numberline {2.1.1}Opis algoritma}{4}{}%
+\contentsline {subsubsection}{\numberline {2.1.2}Psevdokoda}{4}{}%
+\contentsline {subsubsection}{\numberline {2.1.3}Predstavitev rezultatov}{4}{}%
+\contentsline {subsection}{\numberline {2.2}Greedy algoritem}{4}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}Opis algoritma}{4}{}%

@@ -1,0 +1,119 @@
+
+\documentclass[a4paper,12pt]{article}
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{float}
+\usepackage{url}
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{graphicx}
+\usepackage{amssymb}
+
+\newcommand{\pojem}[1]{\underline{\textsc{#1}}}
+
+\theoremstyle{definition}
+\newtheorem{definicija}{Definicija}
+
+\theoremstyle{plain}
+\newtheorem{izrek}{Izrek}
+
+\newenvironment{dokaz}{\begin{proof}[Dokaz izreka]}{\end{proof}}
+
+\setlength\parindent{0pt}
+
+\begin{document}
+
+\thispagestyle{empty}
+\begin{center}
+\begin{minipage}{0.75\linewidth}
+    \centering
+    {\Large Univerza v Ljubljani \\ Fakulteta za matematiko in fiziko}
+    \\
+    \vspace{7cm}
+
+    {\uppercase{\Large \textbf{Scheduling triangles}}} \\ Finančni praktikum \\
+    \vspace{5cm}
+
+    Avtorja:\\
+    { Blaž Arh, Matic Matušek}
+    \vspace{5cm}
+
+    {\Large Ljubljana, 2022}
+\end{minipage}
+\end{center}
+
+
+\newpage
+\tableofcontents
+\newpage
+
+
+
+\section{Uvod}
+\subsection{Navodilo naloge}
+
+Imamo $n$ pravokotnih enakokrakih trikotnikov, ki so določeni z dolžino kraka $d_i$ za $i=1,2,...,n$  in pravim kotom med krakoma.
+Trikotnike postavimo, z nogo na $x$-os, na sledeči način.
+\begin{center}
+   \includegraphics[width=8cm, height=4cm]{primer_trikotnikov.png} 
+\end{center}
+
+Trikotniki morajo biti postavljeni tako, da je hipotenuza trikotnika naraščajoča glede na $x$-os. \\
+Želimo si trikotnike postaviti tako, da je dolžina teh trikotnikov najkrajša. Trikotniki se med seboj ne smejo prekrivati,
+prav tako pa mora biti krak noge pravokoten na $x$-os.
+
+\subsection{Uporabnost}
+Pomembno je, da znamo ta matematični problem interpretirati praktično. \\
+Torej:
+\begin{itemize}
+    \item pravokotni enakokraki trikotniki $=$ opravila,
+    \item dolžina kraka $=$ pomembnost opravila.
+\end{itemize}
+
+Želimo si sestaviti urnik iz $n$ opravil. Naj bo $d_i$ pomembnost $i$-tega opravila. Naš cilj je sestaviti čim krajši urnik. Želimo, da se pomembnejša opravila izvedejo, v primeru zakasnitve le teh pa lahko manj pomembna opravila izpustimo.
+Večji kot je trikotnik, bolj pomembno je opravilo. Kot je razvidno iz zgornje slike, lahko opravila z manjšo pomembnostjo vstavimo pod opravila z večjo pomembnostjo. To pomeni, da manjše trikotnike vstavljamo pod večje. Torej, če pride do zakasnitve
+pomembnejšega opravila (večjega trikotnika), manj pomembno opravilo  izpustimo (manjši trikotnik).
+
+
+\section{Reševanje problema s pomočjo različnih algoritmov}
+Reševanja najinega problema sva se lotila s pomočjo treh algoritmov:
+\begin{itemize}
+    \item bruteforce algoritem
+    \item Greedy algoritem
+    \item algoritem, ki s pomočjo celoštevilškega lineranega programiranja išče optimalno rešitev.
+\end{itemize}
+
+\subsection{Brute force algoritem}
+\subsubsection{Opis algoritma}
+\subsubsection{Psevdokoda}
+\subsubsection{Predstavitev rezultatov}
+
+
+\subsection{Greedy algoritem}
+\subsubsection{Opis algoritma}
+Greedy algoritem je kateri koli algoritem, ki rešuje problem tako, da na vsakem koraku naredi lokalno optimalno izbiro.
+Greedy algoritem najprej razvrsti trikotnike tako, da velja \newline
+$d_1 \geq d_2 \geq d_3 \geq ... \geq d_n$. Prvi trikotnik razvrsti na $x=0$, kar ustvari prostor pod trikotnikom 1.
+Nato vsak trikotnik $j=2,...,n$ postavi v največji možen prostor pod že postavljenimi trikotniki. Če je več enakih prostorov, izbere prvega povrsti.
+Če ima izbrani prostor pod trikotnikom dolžino $l$ in se začne v času $x_i$, potem je trikotnik $j$ postavljen na mesto $x_j=x_i+d_j$. Če je $2d_j \ge l$,  potem se vsi trikotniki $k$, za katere je $x_k \ge x_j$ zamaknejo za $ 2d_j-l$, da se ne prekrivajo. Opisano 
+dogajanje prikazuje spodnji primer($x=l, p_i = d_i $).
+\begin{center}
+    \includegraphics[width=13cm, height=3cm]{greedy.png} 
+ \end{center}
+Pri številnih problemih Greedy algoritem ne poišče optimalne rešitve, nič drugače ni pri našem problemu.
+Na naslednji sliki prikažemo primer, ko Greedy ni optimalen. Greedy algoritem (desna slika) vrne dolzino 42 in ne vrne optimalne dolžine, ki je 40 (leva slika).
+\begin{center}
+    \includegraphics[width=10cm, height=3cm]{primer_neoptimalnosti_greedy.png} 
+ \end{center}
+Hitrost Greedy algoritma je polinomska. Da se pokazati, da je aproksimacijsko razmerje zgornje meje točnosti Greedy algoritma $1.5$ optimalnega časa. Torej, če je optimalni čas določenega primerna
+$40$ časovnih enot, potem Greedy pokaže največ $60$ časovnih enot.
+
+
+
+
+
+
+
+\end{document}

@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1670263485 "c:/Users/USER/Desktop/blaz_sola/3.letnik/FP/FP-scheduling-problem/koncno_porocilo.tex" "koncno_porocilo.pdf" "koncno_porocilo" 1670263486
+["pdflatex"] 1670263664 "c:/Users/USER/Desktop/blaz_sola/3.letnik/FP/FP-scheduling-problem/koncno_porocilo.tex" "koncno_porocilo.pdf" "koncno_porocilo" 1670263665
   "C:/Users/USER/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1650972372 83537 02a664bae19768fff9f97d0ded668270 ""
   "C:/Users/USER/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1650970222 10246489 e085406d24141dfbd7da1317d314fc5d ""
   "C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc" 1254935040 2375 baa924870cfb487815765f9094cf3728 ""
@@ -74,11 +74,11 @@
   "C:/Users/USER/AppData/Local/Programs/MiKTeX/tex/latex/lm/t1lmtt.fd" 1256929440 2681 354015af3b61e7be30009f084986375a ""
   "C:/Users/USER/AppData/Local/Programs/MiKTeX/tex/latex/lm/ts1lmr.fd" 1256929440 1912 6435298ac30b512714b02d4c8c9e923c ""
   "C:/Users/USER/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "c:/Users/USER/Desktop/blaz_sola/3.letnik/FP/FP-scheduling-problem/koncno_porocilo.tex" 1670263481 9181 6237dc618cc0019f4253c686aa417b30 ""
+  "c:/Users/USER/Desktop/blaz_sola/3.letnik/FP/FP-scheduling-problem/koncno_porocilo.tex" 1670263661 8780 f66a3801014aadcf8e37dee7a3147e71 ""
   "greedy.png" 1668089677 9317 c2b3bb61f9ce1bf6f7ed85611b80d0e6 ""
-  "koncno_porocilo.aux" 1670263486 1617 dc3f7466cbd2fe0b5baebe593a204455 "pdflatex"
-  "koncno_porocilo.tex" 1670263481 9181 6237dc618cc0019f4253c686aa417b30 ""
-  "koncno_porocilo.toc" 1670263486 940 1d3b63b45ec0db97417847e5739c9770 "pdflatex"
+  "koncno_porocilo.aux" 1670263665 1617 359739440b509efa6bd406836f8f636b "pdflatex"
+  "koncno_porocilo.tex" 1670263661 8780 f66a3801014aadcf8e37dee7a3147e71 ""
+  "koncno_porocilo.toc" 1670263665 940 1d3b63b45ec0db97417847e5739c9770 "pdflatex"
   "primer_neoptimalnosti_greedy.png" 1668089677 13444 d516051d89e6fb30232b45d51fadc765 ""
   "primer_trikotnikov.png" 1668089677 5141 c81c89ed773142e33bad2ee90fde6f30 ""
   "sim_brut.png" 1670249979 14765 0d27115620b5b1c9241fac57c34f1557 ""

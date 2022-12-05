@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.26)  5 DEC 2022 18:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.26)  5 DEC 2022 19:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -325,8 +325,13 @@ Overfull \hbox (35.41331pt too wide) in paragraph at lines 204--205
 <sim_greedy.png, id=39, 389.5353pt x 114.9093pt>
 File: sim_greedy.png Graphic file (type png)
 <use sim_greedy.png>
-Package pdftex.def Info: sim_greedy.png  used on input line 210.
+Package pdftex.def Info: sim_greedy.png  used on input line 205.
 (pdftex.def)             Requested size: 389.53433pt x 114.90901pt.
+
+Overfull \hbox (28.90903pt too wide) in paragraph at lines 205--206
+[] 
+ []
+
 [7 <./sim_brut.png> <./sim_clp.png> <./sim_greedy.png>] (koncno_porocilo.aux) ) 
 Here is how much of TeX's memory you used:
  4232 strings out of 478582
@@ -337,7 +342,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  55i,5n,62p,365b,272s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on koncno_porocilo.pdf (7 pages, 225691 bytes).
+Output written on koncno_porocilo.pdf (7 pages, 225716 bytes).
 PDF statistics:
  90 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

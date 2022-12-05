@@ -84,8 +84,11 @@ Nato sva napisala Greedy algoritem, ki ima nizko časovno zahtevnost vendar ne v
 
 \subsection{Brute force algoritem}
 \subsubsection{Opis algoritma}
-Algoritem iz n trikotnikov sestavi vse možne permutacije in izračuna njihovo dolžino. Nato 
-pa izbire prvo permutacijo na katero je naletel, ki je imela minimalno dolžino.
+Imamo slovar z n trikotniki in seznam, sestavljen s $n!$ podseznami dolžine n
+(vse možne permutacije vrstnega reda trikotnikov). Potem za vsako permutacijo izračuna dolžino urnika in 
+dolžine beleži v nov seznam. Ko pregleda vse permutacije, poišče \textbf{prvo} možno permutacijo, ki vrne optimalno rešitev
+(minimalno dožino v seznamu vseh dolžin) in jo vzame za rešitev.
+
 \subsubsection{Psevdokoda}
 \begin{verbatim}
     1.    Vhod: trikotniki
@@ -150,7 +153,7 @@ Tukaj opisat popravi\_mesta...
 
 %\subsubsection{Predsatvitev rezultatov}
 
-%\subsection{Clp}
+\subsection{Celoštevilsko linearno programiranje}
 %\subsubsection{Opis algoritma}
 \subsubsection{Psevdokoda}
 \begin{verbatim}
@@ -174,9 +177,12 @@ v seznamu s so napisani položaji nog trikotnikov
 
 \subsection{Generiranje podatkov}
 
+\newpage
+
 \subsection{Predstavitev rezultatov}
-Najboljši prikaz vseh treh algoritmov je seveda skozi primer.
+Pri prikazu delovanja vseh treh algoritmov si bomo pomagali z zgledom.
 Za testno množico sva izbrala 9 enakokrakih trikotnikov z naslednjimi dolžinami.
+
 \begin{verbatim}
     test = naredi_trikotnike(
                 9,
@@ -194,9 +200,9 @@ Za testno množico sva izbrala 9 enakokrakih trikotnikov z naslednjimi dolžinam
             )
 \end{verbatim}
 
-seznam trikotnikov, ime algoritma, več optimalnih razporeditev 
-število optimalnih rešitev 72. \\
 
+Rezultati, ki jih vrnejo algoritmi so sestavljeni iz dolžine trikotnikov in razporeditev le teh. Rezultati
+zgleda so sledeči:
 \begin{itemize}
     \item Bruteforce algoritem
 \end{itemize}    
@@ -209,15 +215,17 @@ seznam trikotnikov, ime algoritma, več optimalnih razporeditev
     \item Greedy algoritem
 \end{itemize}    
     \includegraphics[]{sim_greedy.png}
+\\ \\
+\textbf{Sklep zgleda}: Opazimo, da tako brute force algoritem in CLP vrneta enako dolžino,
+kar se je tudi pričakovalo, saj oba algoritma poiščeta optimalno rešitev. Razlikujeta pa se po
+razporeditvi trikotnikov. Pri zgornjem zgledu je 72 različnih razporeditev trikotnikov, ki podajo najmanjšo
+razdaljo oz. optimalno rešitev. Z uporabo greedy algoritma pa do optimalne rešitve nismo
+prišli. Velikost napake je cca $5,29\%$.
 
 
-    \begin{thebibliography}{9}
-
-
-        
-        \bibitem{triangle}
+\begin{thebibliography}{9}
+    \bibitem{triangle}
           Dürr, C., Hanzálek, Z., Konrad, C. et al. The triangle scheduling problem. J Sched 21, 305-312 (2018). \href{https://doi.org/10.1007/s10951-017-0533-1}{https://doi.org/10.1007/s10951-017-0533-1 }
-
-        \end{thebibliography}
+\end{thebibliography}
 
 \end{document}

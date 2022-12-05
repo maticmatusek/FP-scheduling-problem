@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.26)  5 DEC 2022 19:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.26)  5 DEC 2022 20:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -383,7 +383,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout4 = `koncno_porocilo.toc'.
 
  [2]
-<primer_trikotnikov.png, id=81, 162.00525pt x 79.497pt>
+<primer_trikotnikov.png, id=86, 162.00525pt x 79.497pt>
 File: primer_trikotnikov.png Graphic file (type png)
 <use primer_trikotnikov.png>
 Package pdftex.def Info: primer_trikotnikov.png  used on input line 60.
@@ -392,81 +392,83 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 71
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [3 <./primer_trikotnikov.png>]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 90.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 93.
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [4]
-<greedy.png, id=99, 478.03593pt x 94.10156pt>
+<greedy.png, id=104, 478.03593pt x 94.10156pt>
 File: greedy.png Graphic file (type png)
 <use greedy.png>
-Package pdftex.def Info: greedy.png  used on input line 118.
+Package pdftex.def Info: greedy.png  used on input line 121.
 (pdftex.def)             Requested size: 369.88318pt x 85.36403pt.
-<primer_neoptimalnosti_greedy.png, id=100, 466.74374pt x 131.74219pt>
+<primer_neoptimalnosti_greedy.png, id=105, 466.74374pt x 131.74219pt>
 File: primer_neoptimalnosti_greedy.png Graphic file (type png)
 <use primer_neoptimalnosti_greedy.png>
-Package pdftex.def Info: primer_neoptimalnosti_greedy.png  used on input line 123.
+Package pdftex.def Info: primer_neoptimalnosti_greedy.png  used on input line 126.
 (pdftex.def)             Requested size: 284.53522pt x 85.36201pt.
  [5 <./greedy.png> <./primer_neoptimalnosti_greedy.png>]
-Overfull \hbox (97.82524pt too wide) in paragraph at lines 146--146
+Overfull \hbox (97.82524pt too wide) in paragraph at lines 149--149
 []            \T1/lmtt/m/n/12 lokalna_dolzina_urnika.append( dolzina_urnika(trikotniki_lokalno) )[] 
  []
 
 
-Overfull \hbox (73.12523pt too wide) in paragraph at lines 146--146
+Overfull \hbox (73.12523pt too wide) in paragraph at lines 149--149
 []        \T1/lmtt/m/n/12 index = lokalna_dolzina_urnika.index( min(lokalna_dolzina_urnika) )[] 
  []
 
 
-Overfull \hbox (29.9002pt too wide) in paragraph at lines 172--172
+Overfull \hbox (29.9002pt too wide) in paragraph at lines 175--175
 []        \T1/lmtt/m/n/12 for j, e in enumerate(seznam_dolzin_trikotnikov[i+1:], i+1):[] 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 197--199
-
- []
-
-<sim_brut.png, id=113, 402.5439pt x 123.5817pt>
+<sim_brut.png, id=118, 402.5439pt x 123.5817pt>
 File: sim_brut.png Graphic file (type png)
 <use sim_brut.png>
-Package pdftex.def Info: sim_brut.png  used on input line 203.
+Package pdftex.def Info: sim_brut.png  used on input line 209.
 (pdftex.def)             Requested size: 402.54291pt x 123.58138pt.
 
-Overfull \hbox (12.54291pt too wide) in paragraph at lines 203--204
+Overfull \hbox (12.54291pt too wide) in paragraph at lines 209--210
 [] 
  []
 
-<sim_clp.png, id=114, 396.0396pt x 124.3044pt>
+<sim_clp.png, id=119, 396.0396pt x 124.3044pt>
 File: sim_clp.png Graphic file (type png)
 <use sim_clp.png>
-Package pdftex.def Info: sim_clp.png  used on input line 207.
+Package pdftex.def Info: sim_clp.png  used on input line 213.
 (pdftex.def)             Requested size: 396.03862pt x 124.30408pt.
 
-Overfull \hbox (6.03862pt too wide) in paragraph at lines 207--208
+Overfull \hbox (6.03862pt too wide) in paragraph at lines 213--214
 [] 
  []
 
-<sim_greedy.png, id=115, 389.5353pt x 114.9093pt>
+[7 <./sim_brut.png> <./sim_clp.png>]
+<sim_greedy.png, id=127, 389.5353pt x 114.9093pt>
 File: sim_greedy.png Graphic file (type png)
 <use sim_greedy.png>
-Package pdftex.def Info: sim_greedy.png  used on input line 211.
+Package pdftex.def Info: sim_greedy.png  used on input line 217.
 (pdftex.def)             Requested size: 389.53433pt x 114.90901pt.
-[7 <./sim_brut.png> <./sim_clp.png>] [8 <./sim_greedy.png>] (koncno_porocilo.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--224
+
+ []
+
+[8 <./sim_greedy.png>] (koncno_porocilo.aux)
 Package rerunfilecheck Info: File `koncno_porocilo.out' has not changed.
-(rerunfilecheck)             Checksum: 0DF3F66491A70751F2367281E5FDF88D;1895.
+(rerunfilecheck)             Checksum: 9D38F413A3A7BFE381C345ABB5985A2B;2142.
  ) 
 Here is how much of TeX's memory you used:
- 10905 strings out of 478582
- 173553 string characters out of 2844816
- 469579 words of memory out of 3000000
- 28890 multiletter control sequences out of 15000+600000
+ 10907 strings out of 478582
+ 173583 string characters out of 2844816
+ 468582 words of memory out of 3000000
+ 28891 multiletter control sequences out of 15000+600000
  501281 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,5n,63p,428b,485s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on koncno_porocilo.pdf (8 pages, 238942 bytes).
+Output written on koncno_porocilo.pdf (8 pages, 241462 bytes).
 PDF statistics:
- 181 PDF objects out of 1000 (max. 8388607)
- 25 named destinations out of 1000 (max. 500000)
- 135 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 186 PDF objects out of 1000 (max. 8388607)
+ 26 named destinations out of 1000 (max. 500000)
+ 143 words of extra memory for PDF output out of 10000 (max. 10000000)
 

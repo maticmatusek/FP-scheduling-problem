@@ -10,6 +10,6 @@
 \contentsline {subsubsection}{\numberline {2.2.1}Opis algoritma}{5}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}Psevdokoda}{5}{subsubsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.3}Celoštevilsko linearno programiranje}{6}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}Psevdokoda}{6}{subsubsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.4}Generiranje podatkov}{6}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Predstavitev rezultatov}{7}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.3.1}Psevdokoda}{7}{subsubsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.4}Generiranje podatkov}{7}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Predstavitev rezultatov}{8}{subsection.2.5}%

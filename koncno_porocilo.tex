@@ -69,7 +69,7 @@ Pomembno je, da znamo ta matematični problem interpretirati v praksi. Trikotnik
 Tako je torej:
 \begin{itemize}
     \item pravokotni enakokraki trikotniki $=$ opravila,
-    \item dolžina kraka $=$ pomembnost opravila.
+    \item dolžina kraka $d_i$ $=$ pomembnost opravila.
 \end{itemize}
 
 Želimo si sestaviti urnik iz $n$ opravil. Naj bo $d_i$ pomembnost $i$-tega opravila. Naš cilj je sestaviti čim krajši urnik. Želimo, da se pomembnejša opravila izvedejo, v primeru zakasnitve le teh pa lahko manj pomembna opravila izpustimo.
@@ -111,9 +111,7 @@ dolžine beleži v nov seznam. Ko pregleda vse permutacije, poišče \textbf{prv
 
 \subsection{Greedy algoritem}
 \subsubsection{Opis algoritma}
-Greedy algoritem je kateri koli algoritem, ki rešuje problem tako, da na vsakem koraku naredi lokalno optimalno izbiro.
-Greedy algoritem najprej razvrsti trikotnike tako, da velja 
-$d_1 \geq d_2 \geq d_3 \geq ... \geq d_n$. Prvi trikotnik razvrsti na $x=0$, kar ustvari prostor pod trikotnikom 1.
+Greedy algoritem je kateri koli algoritem, ki rešuje problem tako, da na vsakem koraku naredi lokalno optimalno izbiro. Prvi trikotnik razvrsti na $x=0$, kar ustvari prostor pod trikotnikom 1.
 Nato vsak trikotnik $j=2,...,n$ postavi na mesto, kjer je dolžina že postavljenih trikotnikov najkrajša. Če je več enakih prostorov, izbere prvega povrsti.
 Če ima izbrani prostor pod trikotnikom dolžino $l$ in se začne v času $x_i$, potem je trikotnik $j$ postavljen na mesto $x_j=x_i+d_j$. Če je $2d_j \ge l$,  potem se vsi trikotniki $k$, za katere je $x_k \ge x_j$ zamaknejo za $ 2d_j-l$, da se ne prekrivajo. Opisano 
 dogajanje prikazuje spodnji primer, kjer je $x=l$ in $ p_i = d_i $.
@@ -149,12 +147,42 @@ $40$ časovnih enot, potem Greedy pokaže največ $60$ časovnih enot.
 \end{verbatim}
 
 
-Funkcija popravi\_mesta\_ostalim\_trikotnikom nastavi mesta tistih trikotnikov, ki so v slovarju trikotniki\_lokalno, tako da so še vedno urejeni po vrsti in noben izmed trikotnikov ni na istem mestu.
+Funkcija popravi\_mesta\_ostalim\_trikotnikom nastavi mesta tistih trikotnikov, ki so v slovarju trikotniki\_lokalno, tako da so še vedno urejeni po vrsti in vsak trikotnik ima enolično določeno mesto.
+V prvi \texttt{for} for zanki se z vsakim korakom doda nov trikotnik v slovar trikotniki\_lokalno, potem naslednja \texttt{for} zanka pregleda vsa mesta, kamor lahko postavi na novo dodani trikotnik in si dolžine urnika beleži v seznam lokalna\_dolzina\_urnika. Po zaključeni drugi \texttt{for} zanki, se izbere optimalen oziroma najkrajši čas urnika in se za ta določen čas na trikotnike aplicira njihov vrstni red.
+Ko se zaključijo vse zanke, imamo v slovarju trikotniki\_lokalno dodane vse vhodne trikotnike, ki so bili postavljeni na lokalno optimalno mesto.
+
 
 %\subsubsection{Predsatvitev rezultatov}
 
 \subsection{Celoštevilsko linearno programiranje}
-%\subsubsection{Opis algoritma}
+V spodnjem primeru privzamemo, da je položaj noge oziroma $x$-koordinato označuje $s_i$, $t$ pa označuje dolžino urnika. Spremenljivka $x_{i,j}$ je definirana na naslednji način
+$$
+x_{i,j} =
+\left\{
+	\begin{array}{ll}
+		1  & \mbox{če } i\text{-ti trikotnik za} j\text{-tim trikotnikom} \\
+		0  & \mbox{če } \text{sicer}
+	\end{array}
+\right.
+$$
+in lahko zavzame le vrednosti 0 in 1, medtem ko $s_i$ in $t$ zavzemata pozitivne realne vrednosti. Pogoj $|s_i-s_j| \geq \text{min}\{d_i,d_j\}$ je glavni pogoj v najinem linearnem programu, ostali pogoji pa več ali manj služijo omejevanju spremenljivk.
+S pogojem $x_{i,j}+x_{j,i}=1$ povemo, da mora veljati, da je $j$-ti trikotnik pred $i$-tim ali pa, da je $i$-ti trikotnik pred $j$-tim.
+$T$ označuje $\sum_{i=1}^n d_i$ in se uporabi zato, da v primeru, ko je $s_j < s_i$ pogoji 2 v spodnjem zgledu vseeno veljajo.
+Linearni program bi v matematičnem zapisu izgledal tako:
+\begin{center}
+    min $t$
+
+    p.p.
+
+    1.  $\forall i: 0 \leq s_i \leq t-d_i$
+
+    \medskip
+
+    2.  $\forall i,j \text{ kjer } i\neq j: s_j - s_i \geq \text{max}\{d_i,d_j\}-T\cdot x_{i,j}$
+    \medskip
+
+    3.  $\forall i,j \text{ kjer } i\neq j: x_{i,j}+x_{j,i}=1$
+\end{center}
 \subsubsection{Psevdokoda}
 \begin{verbatim}
     1.     Vhod: seznam_dolzin_trikotnikov
@@ -173,7 +201,9 @@ Funkcija popravi\_mesta\_ostalim\_trikotnikom nastavi mesta tistih trikotnikov, 
     14.            add_constraint(s[j] - s[i] >= m - T*x[i, j])
     15.     Izhod: seznam s
 \end{verbatim}
-v seznamu s so napisani položaji nog trikotnikov
+
+V prvih 6ih vrsticah definiramo spremenljivke in minimizacijsko funkcijo. V \texttt{for} zankah pa podamo vse pogoje.
+Izhodni podatek je seznam \texttt{s}, ki vsebuje položaje nog trikotnikov. 
 
 \subsection{Generiranje podatkov}
 
@@ -201,7 +231,7 @@ Za testno množico sva izbrala 9 enakokrakih trikotnikov z naslednjimi dolžinam
 \end{verbatim}
 
 
-Rezultati, ki jih vrnejo algoritmi so sestavljeni iz dolžine trikotnikov in razporeditev le teh. Rezultati
+Rezultati, ki jih vrnejo algoritmi so sestavljeni iz dolžine celotnega urnika in razporeditev le teh. Rezultati
 zgleda so sledeči:
 \begin{itemize}
     \item Bruteforce algoritem

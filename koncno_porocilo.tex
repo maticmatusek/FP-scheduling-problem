@@ -79,15 +79,15 @@ pomembnejšega opravila (večjega trikotnika), manj pomembno opravilo  izpustimo
 
 
 \section{Reševanje problema s pomočjo različnih algoritmov}
-V znanstvenem članku The triangle scheduling problem \cite{triangle} je za reševanje problema predlagan Greedy algoritem. Pred Greedy algoritmom sva se odločila sprogramirati brute force algoritem, ki je nekoliko manj težaven, je pa precej časovno zahteven. 
-Nato sva napisala Greedy algoritem, ki ima nizko časovno zahtevnost vendar ne vrne optimalnega rezultata. Ker Greedy algoritem ne vrne optimuma, sva za konec napisala tudi optimalen algoritem, kjer sva uporabila celoštevilsko linearno programiranje, ki je manj časovno zahteven kot brute force.
+V znanstvenem članku The triangle scheduling problem \cite{triangle} je za reševanje problema predlagan Greedy algoritem. Pred Greedy algoritmom sva se odločila sprogramirati brute force algoritem, ki je nekoliko manj težaven, je pa precej časovno zahteven in sicer $O(n!)$. 
+Nato sva napisala Greedy algoritem, ki ima nizko časovno zahtevnost vendar ne vrne optimalnega rezultata. Ker Greedy algoritem ne vrne optimuma, sva za konec napisala tudi optimalen algoritem, kjer sva uporabila celoštevilsko linearno programiranje, ki je malo manj časovno zahteven kot brute force. Torej najbolj časovno zahteven algoritem je brute force, takoj za njem pa celoštevilsko linearno programiranje. Najmanj časovno zahteven algoritem je Greedy algoritem, ki rešitev poišče v polinomskem času $O$($n^2$) vendar ne vrne optimalne rešitve. 
 
 
 \subsection{Brute force algoritem}
 \subsubsection{Opis algoritma}
 Imamo slovar z n trikotniki in seznam, sestavljen s $n!$ podseznami dolžine n
 (vse možne permutacije vrstnega reda trikotnikov). Potem za vsako permutacijo izračuna dolžino urnika in 
-dolžine beleži v nov seznam. Ko pregleda vse permutacije, poišče \textbf{prvo} možno permutacijo, ki vrne optimalno rešitev
+dolžine beleži v nov seznam. Ko pregleda vse permutacije, poišče prvo možno permutacijo, ki vrne optimalno rešitev
 (minimalno dolžino v seznamu vseh dolžin) in jo vzame za rešitev.
 
 \subsubsection{Psevdokoda}
@@ -127,23 +127,25 @@ Na naslednji sliki prikažemo primer, ko Greedy ni optimalen. Greedy algoritem (
 Hitrost Greedy algoritma je polinomska. Da se pokazati, da je aproksimacijsko razmerje zgornje meje točnosti Greedy algoritma $1.5$ optimalnega časa. Torej, če je optimalni čas določenega primerna
 $40$ časovnih enot, potem Greedy pokaže največ $60$ časovnih enot.
 
+\newpage
+
 \subsubsection{Psevdokoda}
 \begin{verbatim}
-    1.     Vhod: trikotniki
-    2.     n = length(trikotniki)
-    3.     trikotniki_lokalno = dict()
-    4.     for i in 0:(n-1)
-    5.         trikotniki_lokalno[i] = trikotniki[i]
-    6.         m = length(trikotniki_lokalno)
-    7.         lokalna_dolzina_urnika = []
-    8.         for j in 0:(m-1):
-    9.             trikotniki_lokalno[i]["vrstni_red"] = j
-    10.            *popravi_mesta_ostalim_trikotnikom
-    11.            lokalna_dolzina_urnika.append( dolzina_urnika(trikotniki_lokalno) )
-    12.        index = lokalna_dolzina_urnika.index( min(lokalna_dolzina_urnika) )
-    13.        trikotniki_lokalno[i]["vrstni_red"] = index
-    14.        *popravi_mesta_ostalim_trikotnikom
-    15.    Izhod: trikotniki_lokalno
+ Vhod: trikotniki
+ n = length(trikotniki)
+ trikotniki_lokalno = dict()
+ for i in 0:(n-1)
+     trikotniki_lokalno[i] = trikotniki[i]
+     m = length(trikotniki_lokalno)
+     lokalna_dolzina_urnika = []
+     for j in 0:(m-1):
+         trikotniki_lokalno[i]["vrstni_red"] = j
+         *popravi_mesta_ostalim_trikotnikom
+         lokalna_dolzina_urnika.append( dolzina_urnika(trikotniki_lokalno) )
+     index = lokalna_dolzina_urnika.index( min(lokalna_dolzina_urnika) )
+     trikotniki_lokalno[i]["vrstni_red"] = index
+     *popravi_mesta_ostalim_trikotnikom
+ Izhod: trikotniki_lokalno
 
 \end{verbatim}
 
@@ -156,17 +158,18 @@ Ko se zaključijo vse zanke, imamo v slovarju trikotniki\_lokalno dodane vse vho
 %\subsubsection{Predsatvitev rezultatov}
 
 \subsection{Celoštevilsko linearno programiranje}
-V spodnjem primeru privzamemo, da je položaj noge oziroma $x$-koordinato označuje $s_i$, $t$ pa označuje dolžino urnika. Spremenljivka $x_{i,j}$ je definirana na naslednji način
+V spodnjem primeru privzamemo, da položaj noge oziroma $x$-koordinato označuje $s_i$, $t$ pa označuje dolžino urnika. Spremenljivka $x_{i,j}$ je definirana na naslednji način
 $$
 x_{i,j} =
 \left\{
 	\begin{array}{ll}
-		1  & \mbox{če } i\text{-ti trikotnik za} j\text{-tim trikotnikom} \\
-		0  & \mbox{če } \text{sicer}
+		1,  & \mbox{če } i\text{-ti trikotnik za} j\text{-tim trikotnikom} \\
+		0,  & \mbox{sicer } 
 	\end{array}
 \right.
 $$
 in lahko zavzame le vrednosti 0 in 1, medtem ko $s_i$ in $t$ zavzemata pozitivne realne vrednosti. Pogoj $|s_i-s_j| \geq \text{min}\{d_i,d_j\}$ je glavni pogoj v najinem linearnem programu, ostali pogoji pa več ali manj služijo omejevanju spremenljivk.
+\newpage
 S pogojem $x_{i,j}+x_{j,i}=1$ povemo, da mora veljati, da je $j$-ti trikotnik pred $i$-tim ali pa, da je $i$-ti trikotnik pred $j$-tim.
 $T$ označuje $\sum_{i=1}^n d_i$ in se uporabi zato, da v primeru, ko je $s_j < s_i$ pogoji 2 v spodnjem zgledu vseeno veljajo.
 Linearni program bi v matematičnem zapisu izgledal tako:
@@ -207,16 +210,16 @@ V prvih 6ih vrsticah definiramo spremenljivke in minimizacijsko funkcijo. V \tex
 Izhodni podatek je seznam \texttt{s}, ki vsebuje položaje nog trikotnikov. 
 
 \subsection{Generiranje podatkov}
-Pri generiranju podatkov sva potrebovala zgenerirati dolžino kraka $d_{i}$. Če sva hotela, da je dolžina $d_{i}$
-celoštevilska, sva si pomagala s funkcijo \texttt{randint}. Če pa sva želela, da je dolžina kraka $d_{i}$ realno število,
-pa sva si pomagala s funkcijo \texttt{uniform}. Preden sva določila dolžino, sva potrebovala določiti
-interval možnih dolžin. V zgledu na koncu poročila sva za spodnjo mejo izbrala število 1, za
-zgornjo mejo pa število 50. 
-Torej funckija dopušča izbiro kateregakoli intervala dolžin kraka $d_{i}$ 
-($d_{i} \in [a,b]; \text{ } a, b \in \mathbf{R}^+  \text{ in } a \leq b$) in dopušča izbiro ali je dolžina kraka $d_{i}$ celoštevilska
-ali realna.
-
+Pri generiranju podatkov sva potrebovala zgenerirati $n$ dolžin krakov $d_{i}$. Če sva hotela, da je dolžina $d_{i}$
+celoštevilska, sva si pomagala s funkcijo \texttt{random.randint}. Če pa sva želela, da je dolžina kraka $d_{i}$ realno število,
+pa sva si pomagala s funkcijo \texttt{random.uniform}. Funkcijama je potrebno podati zgornjo in spodnjo mejo, torej interval iz katerega izbira naključne vrednosti.
 \newpage
+V zgledu na koncu poročila sva za spodnjo mejo izbrala število 1, za
+zgornjo mejo pa število 50. 
+Funkcija, ki generira podatke ima parametra $a$ in $b$, ki omogočata izbiro katerega koli intervala, tako da velja 
+$d_{i} \in [a,b]; \text{ } a, b \in \mathbf{R}^+  \text{ in } a \leq b$. Funkcija, ki generira podatke, dopušča tudi izbiro celoštevilskih podatkov.
+
+
 
 \subsection{Predstavitev rezultatov}
 Pri prikazu delovanja vseh treh algoritmov si bomo pomagali z zgledom.
@@ -246,6 +249,7 @@ zgleda so sledeči:
     \item Bruteforce algoritem
 \end{itemize}    
     \includegraphics[]{sim_brut.png}
+    \newpage
     \begin{itemize}
     \item Celoštevilsko linearno programiranje
 \end{itemize}    
@@ -261,7 +265,7 @@ razporeditvi trikotnikov. Pri zgornjem zgledu je 72 različnih razporeditev trik
 razdaljo oz. optimalno rešitev. Z uporabo greedy algoritma pa do optimalne rešitve nismo
 prišli. Velikost napake je cca $5,29\%$.
 
-
+\newpage
 \begin{thebibliography}{9}
     \bibitem{triangle}
           Dürr, C., Hanzálek, Z., Konrad, C. et al. The triangle scheduling problem. J Sched 21, 305-312 (2018). \href{https://doi.org/10.1007/s10951-017-0533-1}{https://doi.org/10.1007/s10951-017-0533-1 }

@@ -1,0 +1,15 @@
+\babel@toc {slovene}{}
+\contentsline {section}{\numberline {1}Uvod}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Navodilo naloge}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Uporabnost}{3}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Reševanje problema s pomočjo različnih algoritmov}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Brute force algoritem}{4}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Opis algoritma}{4}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Psevdokoda}{4}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}Greedy algoritem}{5}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Opis algoritma}{5}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Psevdokoda}{6}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}Celoštevilsko linearno programiranje}{6}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Psevdokoda}{7}{subsubsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.4}Generiranje podatkov}{7}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Predstavitev rezultatov}{8}{subsection.2.5}%

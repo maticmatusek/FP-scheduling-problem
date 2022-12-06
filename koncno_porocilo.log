@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.26)  6 DEC 2022 14:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.26)  6 DEC 2022 16:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -280,10 +280,12 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip55
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/spverbatim\spverbatim.sty
+Package: spverbatim 2009/08/10 v1.0 Verbatim with breakable spaces
 )
 \c@definicija=\count284
 \c@izrek=\count285
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 26.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 27.
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
@@ -293,24 +295,24 @@ File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 ) (koncno_porocilo.aux)
 \openout1 = `koncno_porocilo.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count287
@@ -330,7 +332,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 26.
+Package hyperref Info: Link coloring OFF on input line 27.
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
@@ -340,40 +342,40 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count293
 )
-LaTeX Info: Redefining \ref on input line 26.
-LaTeX Info: Redefining \pageref on input line 26.
-LaTeX Info: Redefining \nameref on input line 26.
+LaTeX Info: Redefining \ref on input line 27.
+LaTeX Info: Redefining \pageref on input line 27.
+LaTeX Info: Redefining \nameref on input line 27.
  (koncno_porocilo.out) (koncno_porocilo.out)
 \@outlinefile=\write3
 \openout3 = `koncno_porocilo.out'.
 
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 44.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 45.
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 44.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 45.
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 44.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 45.
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 44.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 45.
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 44.
+(Font)              <12> on input line 45.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 44.
+(Font)              <8> on input line 45.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 44.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
+(Font)              <6> on input line 45.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 45.
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 45.
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -386,89 +388,94 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <primer_trikotnikov.png, id=86, 162.00525pt x 79.497pt>
 File: primer_trikotnikov.png Graphic file (type png)
 <use primer_trikotnikov.png>
-Package pdftex.def Info: primer_trikotnikov.png  used on input line 60.
+Package pdftex.def Info: primer_trikotnikov.png  used on input line 61.
 (pdftex.def)             Requested size: 227.62648pt x 113.8169pt.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 71.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 72.
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [3 <./primer_trikotnikov.png>]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 93.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 94.
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [4]
+)
+Overfull \hbox (5.2002pt too wide) in paragraph at lines 108--108
+[]    \T1/lmtt/m/n/12 11.      trikotniki[i]["vrstni red"] = permutacije[index][i][] 
+ []
+
+[4]
 <greedy.png, id=104, 478.03593pt x 94.10156pt>
 File: greedy.png Graphic file (type png)
 <use greedy.png>
-Package pdftex.def Info: greedy.png  used on input line 121.
+Package pdftex.def Info: greedy.png  used on input line 122.
 (pdftex.def)             Requested size: 369.88318pt x 85.36403pt.
 <primer_neoptimalnosti_greedy.png, id=105, 466.74374pt x 131.74219pt>
 File: primer_neoptimalnosti_greedy.png Graphic file (type png)
 <use primer_neoptimalnosti_greedy.png>
-Package pdftex.def Info: primer_neoptimalnosti_greedy.png  used on input line 126.
+Package pdftex.def Info: primer_neoptimalnosti_greedy.png  used on input line 127.
 (pdftex.def)             Requested size: 284.53522pt x 85.36201pt.
  [5 <./greedy.png> <./primer_neoptimalnosti_greedy.png>]
-Overfull \hbox (141.05026pt too wide) in paragraph at lines 149--149
+Overfull \hbox (141.05026pt too wide) in paragraph at lines 150--150
 []    \T1/lmtt/m/n/12 11.            lokalna_dolzina_urnika.append( dolzina_urnika(trikotniki_lokalno) )[] 
  []
 
 
-Overfull \hbox (116.35025pt too wide) in paragraph at lines 149--149
+Overfull \hbox (116.35025pt too wide) in paragraph at lines 150--150
 []    \T1/lmtt/m/n/12 12.        index = lokalna_dolzina_urnika.index( min(lokalna_dolzina_urnika) )[] 
  []
 
 
-Overfull \hbox (73.12523pt too wide) in paragraph at lines 175--175
+Overfull \hbox (73.12523pt too wide) in paragraph at lines 176--176
 []    \T1/lmtt/m/n/12 10.        for j, e in enumerate(seznam_dolzin_trikotnikov[i+1:], i+1):[] 
  []
 
-[6]
-<sim_brut.png, id=118, 402.5439pt x 123.5817pt>
+[6] [7]
+<sim_brut.png, id=124, 402.5439pt x 123.5817pt>
 File: sim_brut.png Graphic file (type png)
 <use sim_brut.png>
-Package pdftex.def Info: sim_brut.png  used on input line 209.
+Package pdftex.def Info: sim_brut.png  used on input line 218.
 (pdftex.def)             Requested size: 402.54291pt x 123.58138pt.
 
-Overfull \hbox (12.54291pt too wide) in paragraph at lines 209--210
+Overfull \hbox (12.54291pt too wide) in paragraph at lines 218--219
 [] 
  []
 
-<sim_clp.png, id=119, 396.0396pt x 124.3044pt>
+<sim_clp.png, id=125, 396.0396pt x 124.3044pt>
 File: sim_clp.png Graphic file (type png)
 <use sim_clp.png>
-Package pdftex.def Info: sim_clp.png  used on input line 213.
+Package pdftex.def Info: sim_clp.png  used on input line 222.
 (pdftex.def)             Requested size: 396.03862pt x 124.30408pt.
 
-Overfull \hbox (6.03862pt too wide) in paragraph at lines 213--214
+Overfull \hbox (6.03862pt too wide) in paragraph at lines 222--223
 [] 
  []
 
-[7 <./sim_brut.png> <./sim_clp.png>]
-<sim_greedy.png, id=127, 389.5353pt x 114.9093pt>
+[8 <./sim_brut.png> <./sim_clp.png>]
+<sim_greedy.png, id=132, 389.5353pt x 114.9093pt>
 File: sim_greedy.png Graphic file (type png)
 <use sim_greedy.png>
-Package pdftex.def Info: sim_greedy.png  used on input line 217.
+Package pdftex.def Info: sim_greedy.png  used on input line 226.
 (pdftex.def)             Requested size: 389.53433pt x 114.90901pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--224
+Underfull \hbox (badness 10000) in paragraph at lines 226--233
 
  []
 
-[8 <./sim_greedy.png>] (koncno_porocilo.aux)
+[9 <./sim_greedy.png>] (koncno_porocilo.aux)
 Package rerunfilecheck Info: File `koncno_porocilo.out' has not changed.
 (rerunfilecheck)             Checksum: 9D38F413A3A7BFE381C345ABB5985A2B;2142.
  ) 
 Here is how much of TeX's memory you used:
- 10907 strings out of 478582
- 173583 string characters out of 2844816
- 470582 words of memory out of 3000000
- 28891 multiletter control sequences out of 15000+600000
- 501281 words of font info for 54 fonts, out of 8000000 for 9000
+ 10945 strings out of 478582
+ 174538 string characters out of 2844816
+ 471727 words of memory out of 3000000
+ 28919 multiletter control sequences out of 15000+600000
+ 516089 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,5n,63p,428b,485s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on koncno_porocilo.pdf (8 pages, 241611 bytes).
+{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
+Output written on koncno_porocilo.pdf (9 pages, 245744 bytes).
 PDF statistics:
- 186 PDF objects out of 1000 (max. 8388607)
- 26 named destinations out of 1000 (max. 500000)
+ 193 PDF objects out of 1000 (max. 8388607)
+ 27 named destinations out of 1000 (max. 500000)
  143 words of extra memory for PDF output out of 10000 (max. 10000000)
 

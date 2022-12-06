@@ -10,6 +10,7 @@
 \usepackage[]{graphicx}
 \usepackage{amssymb}
 \usepackage{hyperref}
+\usepackage{spverbatim}
 
 \newcommand{\pojem}[1]{\underline{\textsc{#1}}}
 
@@ -91,18 +92,18 @@ dolžine beleži v nov seznam. Ko pregleda vse permutacije, poišče \textbf{prv
 
 \subsubsection{Psevdokoda}
 \begin{verbatim}
-    1.    Vhod: trikotniki
-    2.    n = length(trikotniki)
-    3.    dolzina_urnika = []
-    4.    perutacije = permutations( [0, 1, ..., n-1] )
-    5.    for i in permutacije
-    6.          for j in 0:(n-1)
-    7.            trikotnik["vrstni_red"][j] = permutacija[j]
-    8.      dolzina_urnika.append( dolzina(trikotniki) )
-    9.    index = dolzina_urnika.index( min(dolzina_urnika) )
-    10.   for i in 0:(n-1)
-    11.     trikotniki[i]["vrstni red"] = permutacije[index][i]
-    12.   Izhod: trikotniki
+    1.     Vhod: trikotniki
+    2.     n = length(trikotniki)
+    3.     dolzina_urnika = []
+    4.     perutacije = permutations( [0, 1, ..., n-1] )
+    5.     for i in permutacije
+    6.           for j in 0:(n-1)
+    7.             trikotnik["vrstni_red"][j] = permutacija[j]
+    8.       dolzina_urnika.append( dolzina(trikotniki) )
+    9.     index = dolzina_urnika.index( min(dolzina_urnika) )
+    10.    for i in 0:(n-1)
+    11.      trikotniki[i]["vrstni red"] = permutacije[index][i]
+    12.    Izhod: trikotniki
 
 \end{verbatim}
 
@@ -176,6 +177,14 @@ Tukaj opisat popravi\_mesta...
 v seznamu s so napisani položaji nog trikotnikov
 
 \subsection{Generiranje podatkov}
+Pri generiranju podatkov sva potrebovala zgenerirati dolžino kraka $d_{i}$. Če sva hotela, da je dolžina $d_{i}$
+celoštevilska, sva si pomagala s funkcijo \texttt{randint}. Če pa sva želela, da je dolžina kraka $d_{i}$ realno število,
+pa sva si pomagala s funkcijo \texttt{uniform}. Preden sva določila dolžino, sva potrebovala določiti
+interval možnih dolžin. V zgledu na koncu poročila sva za spodnjo mejo izbrala število 1, za
+zgornjo mejo pa število 50. 
+Torej funckija dopušča izbiro kateregakoli intervala dolžin kraka $d_{i}$ 
+($d_{i} \in [a,b]; \text{ } a, b \in \mathbf{R}^+  \text{ in } a \leq b$) in dopušča izbiro ali je dolžina kraka $d_{i}$ celoštevilska
+ali realna.
 
 \newpage
 

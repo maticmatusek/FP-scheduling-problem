@@ -56,38 +56,38 @@
 \subsection{Navodilo naloge}
 
 Imamo $n$ pravokotnih enakokrakih trikotnikov, ki so določeni z dolžino kraka $d_i$ za $i=1,2,...,n$  in pravim kotom med krakoma.
-Trikotnike postavimo, z nogo na $x$-os, na sledeči način.
+Trikotnike postavimo, z nogo na $x$-os, na sledeči način:
 \begin{center}
    \includegraphics[width=8cm, height=4cm]{primer_trikotnikov.png} 
 \end{center}
 
-Trikotniki morajo biti postavljeni tako, da je hipotenuza trikotnika naraščajoča glede na $x$-os, natančneje naklon hipotenuze je enak 1. \\
-Želimo si trikotnike postaviti tako, da je dolžina teh trikotnikov najkrajša. Trikotniki se med seboj ne smejo prekrivati,
+Trikotniki morajo biti postavljeni tako, da je hipotenuza trikotnika naraščajoča glede na $x$-os, natančneje naklon hipotenuze je enak 1. 
+Trikotnike želimo postaviti tako, da je dolžina teh trikotnikov najkrajša. Trikotniki se med seboj ne smejo prekrivati,
 prav tako pa mora biti krak noge pravokoten na $x$-os.
 
 \subsection{Uporabnost}
-Pomembno je, da znamo ta matematični problem interpretirati v praksi. Trikotnike lahko interpretiramo kot opravila na našem urnike. Radi bi minimizirali trajanje našega urnika, medtem ko bi radi prioritizirali bolj kritična oziroma pomembna opravila.
+Pomembno je, da znamo ta matematični problem interpretirati v praksi. Trikotnike lahko interpretiramo kot opravila na našem urniku. Radi bi minimizirali trajanje našega urnika, medtem ko bi radi prioritizirali bolj kritična oziroma pomembna opravila.
 Tako je torej:
 \begin{itemize}
     \item pravokotni enakokraki trikotniki $=$ opravila,
     \item dolžina kraka $d_i$ $=$ pomembnost opravila.
 \end{itemize}
 
-Želimo si sestaviti urnik iz $n$ opravil. Naj bo $d_i$ pomembnost $i$-tega opravila. Naš cilj je sestaviti čim krajši urnik. Želimo, da se pomembnejša opravila izvedejo, v primeru zakasnitve le teh pa lahko manj pomembna opravila izpustimo.
+Želimo si sestaviti urnik iz $n$ opravil. Naj bo $d_i$ pomembnost $i$-tega opravila. Naš cilj je sestaviti čim krajši urnik. Želimo, da se pomembnejša opravila izvedejo, v primeru zakasnitve le teh, pa lahko manj pomembna opravila izpustimo.
 Večji kot je trikotnik, bolj pomembno je opravilo. Kot je razvidno iz zgornje slike, lahko opravila z manjšo pomembnostjo vstavimo pod opravila z večjo pomembnostjo. To pomeni, da manjše trikotnike vstavljamo pod večje. Torej, če pride do zakasnitve
 pomembnejšega opravila (večjega trikotnika), manj pomembno opravilo  izpustimo (manjši trikotnik).
 
 
 \section{Reševanje problema s pomočjo različnih algoritmov}
-V znanstvenem članku The triangle scheduling problem \cite{triangle} je za reševanje problema predlagan Greedy algoritem. Pred Greedy algoritmom sva se odločila sprogramirati brute force algoritem, ki je nekoliko manj težaven, je pa precej časovno zahteven in sicer $O(n!)$. 
-Nato sva napisala Greedy algoritem, ki ima nizko časovno zahtevnost vendar ne vrne optimalnega rezultata. Ker Greedy algoritem ne vrne optimuma, sva za konec napisala tudi optimalen algoritem, kjer sva uporabila celoštevilsko linearno programiranje, ki je malo manj časovno zahteven kot brute force. Torej najbolj časovno zahteven algoritem je brute force, takoj za njem pa celoštevilsko linearno programiranje. Najmanj časovno zahteven algoritem je Greedy algoritem, ki rešitev poišče v polinomskem času $O$($n^2$) vendar ne vrne optimalne rešitve. 
+Dürr et al. \cite{triangle} za reševanje problema opišejo Greedy algoritem. Pred Greedy algoritmom sva se odločila sprogramirati brute force algoritem, ki je nekoliko manj težaven, je pa precej časovno zahteven in sicer $O(n!)$. 
+Nato sva napisala Greedy algoritem, ki ima nizko časovno zahtevnost, vendar ne vrne optimalnega rezultata. Zato sva za konec napisala tudi optimalen algoritem, kjer sva uporabila celoštevilsko linearno programiranje, ki je malo manj časovno zahtevno kot brute force. Torej najbolj časovno zahteven algoritem je brute force, takoj za njem pa celoštevilsko linearno programiranje. Najmanj časovno zahteven algoritem je Greedy algoritem, ki rešitev poišče v polinomskem času $O$($n^2$), vendar ne vrne optimalne rešitve. 
 
 
 \subsection{Brute force algoritem}
 \subsubsection{Opis algoritma}
-Imamo slovar z n trikotniki in seznam, sestavljen s $n!$ podseznami dolžine n
+Imamo slovar z $n$ trikotniki in seznam, sestavljen z $n!$ podseznami dolžine $n$
 (vse možne permutacije vrstnega reda trikotnikov). Potem za vsako permutacijo izračuna dolžino urnika in 
-dolžine beleži v nov seznam. Ko pregleda vse permutacije, poišče prvo možno permutacijo, ki vrne optimalno rešitev
+jo zabeleži v nov seznam. Ko pregleda vse permutacije, poišče prvo možno permutacijo, ki vrne optimalno rešitev
 (minimalno dolžino v seznamu vseh dolžin) in jo vzame za rešitev.
 
 \subsubsection{Psevdokoda}
@@ -120,7 +120,7 @@ dogajanje prikazuje spodnji primer, kjer je $x=l$ in $ p_i = d_i $.
     \includegraphics[width=13cm, height=3cm]{greedy.png} 
  \end{center}
 Pri številnih problemih Greedy algoritem ne poišče optimalne rešitve in nič drugače ni pri našem problemu.
-Na naslednji sliki prikažemo primer, ko Greedy ni optimalen. Greedy algoritem (desna slika) vrne dolzino 42 in ne vrne optimalne dolžine, ki je 40 (leva slika).
+Na naslednji sliki prikažemo primer, ko Greedy ni optimalen. Greedy algoritem (desna slika) vrne dolžino 42 in ne vrne optimalne dolžine, ki je 40 (leva slika).
 \begin{center}
     \includegraphics[width=10cm, height=3cm]{primer_neoptimalnosti_greedy.png} 
  \end{center}
@@ -150,9 +150,9 @@ $40$ časovnih enot, potem Greedy pokaže največ $60$ časovnih enot.
 \end{verbatim}
 
 
-Funkcija popravi\_mesta\_ostalim\_trikotnikom nastavi mesta tistih trikotnikov, ki so v slovarju trikotniki\_lokalno, tako da so še vedno urejeni po vrsti in vsak trikotnik ima enolično določeno mesto.
-V prvi \texttt{for} for zanki se z vsakim korakom doda nov trikotnik v slovar trikotniki\_lokalno, potem naslednja \texttt{for} zanka pregleda vsa mesta, kamor lahko postavi na novo dodani trikotnik in si dolžine urnika beleži v seznam lokalna\_dolzina\_urnika. Po zaključeni drugi \texttt{for} zanki, se izbere optimalen oziroma najkrajši čas urnika in se za ta določen čas na trikotnike aplicira njihov vrstni red.
-Ko se zaključijo vse zanke, imamo v slovarju trikotniki\_lokalno dodane vse vhodne trikotnike, ki so bili postavljeni na lokalno optimalno mesto.
+Funkcija \texttt{popravi\_mesta\_ostalim\_trikotnikom} nastavi mesta tistih trikotnikov, ki so v slovarju \texttt{trikotniki\_lokalno}, tako da so še vedno urejeni po vrsti in vsak trikotnik ima enolično določeno mesto.
+V prvi \texttt{for} zanki se z vsakim korakom doda nov trikotnik v slovar \texttt{trikotniki\_lokalno}, potem naslednja \texttt{for} zanka pregleda vsa mesta, kamor lahko postavi na novo dodani trikotnik in si dolžine urnika beleži v seznam \texttt{lokalna\_dolzina\_urnika}. Po zaključeni drugi \texttt{for} zanki, se izbere optimalen oziroma najkrajši čas urnika in se za ta določen čas na trikotnike aplicira njihov vrstni red.
+Ko se zaključijo vse zanke, imamo v slovarju \texttt{trikotniki\_lokalno} dodane vse vhodne trikotnike, ki so bili postavljeni na lokalno optimalno mesto.
 
 
 %\subsubsection{Predsatvitev rezultatov}
@@ -163,7 +163,7 @@ $$
 x_{i,j} =
 \left\{
 	\begin{array}{ll}
-		1,  & \mbox{če } i\text{-ti trikotnik za} j\text{-tim trikotnikom} \\
+		1,  & \mbox{če } i\text{-ti trikotnik za } j\text{-tim trikotnikom} \\
 		0,  & \mbox{sicer } 
 	\end{array}
 \right.
@@ -206,18 +206,18 @@ Linearni program bi v matematičnem zapisu izgledal tako:
     15.     Izhod: seznam s
 \end{verbatim}
 
-V prvih 6ih vrsticah definiramo spremenljivke in minimizacijsko funkcijo. V \texttt{for} zankah pa podamo vse pogoje.
+V prvih 6-ih vrsticah definiramo spremenljivke in minimizacijsko funkcijo. V \texttt{for} zankah pa podamo vse pogoje.
 Izhodni podatek je seznam \texttt{s}, ki vsebuje položaje nog trikotnikov. 
 
 \subsection{Generiranje podatkov}
 Pri generiranju podatkov sva potrebovala zgenerirati $n$ dolžin krakov $d_{i}$. Če sva hotela, da je dolžina $d_{i}$
 celoštevilska, sva si pomagala s funkcijo \texttt{random.randint}. Če pa sva želela, da je dolžina kraka $d_{i}$ realno število,
-pa sva si pomagala s funkcijo \texttt{random.uniform}. Funkcijama je potrebno podati zgornjo in spodnjo mejo, torej interval iz katerega izbira naključne vrednosti.
+pa sva si pomagala s funkcijo \texttt{random.uniform}. Funkcijama je potrebno podati zgornjo in spodnjo mejo, torej interval iz katerega izbirata naključne vrednosti.
 \newpage
 V zgledu na koncu poročila sva za spodnjo mejo izbrala število 1, za
 zgornjo mejo pa število 50. 
 Funkcija, ki generira podatke ima parametra $a$ in $b$, ki omogočata izbiro katerega koli intervala, tako da velja 
-$d_{i} \in [a,b]; \text{ } a, b \in \mathbf{R}^+  \text{ in } a \leq b$. Funkcija, ki generira podatke, dopušča tudi izbiro celoštevilskih podatkov.
+ $d_{i} \in [a,b]; \text{ }$ \mbox{$ a, b \in \mathbf{R}^+ \text{ in } a \leq b$.} Funkcija, ki generira podatke, dopušča tudi izbiro celoštevilskih podatkov.
 
 
 
@@ -243,10 +243,10 @@ Za testno množico sva izbrala 9 enakokrakih trikotnikov z naslednjimi dolžinam
 \end{verbatim}
 
 
-Rezultati, ki jih vrnejo algoritmi so sestavljeni iz dolžine celotnega urnika in razporeditev le teh. Rezultati
+Rezultati, ki jih vrnejo algoritmi so sestavljeni iz dolžine celotnega urnika in razporeditve trikotnikov. Rezultati
 zgleda so sledeči:
 \begin{itemize}
-    \item Bruteforce algoritem
+    \item Brute force algoritem
 \end{itemize}    
     \includegraphics[]{sim_brut.png}
     \newpage
@@ -260,10 +260,10 @@ zgleda so sledeči:
     \includegraphics[]{sim_greedy.png}
 \\ \\
 \textbf{Sklep zgleda}: Opazimo, da tako brute force algoritem in CLP vrneta enako dolžino,
-kar se je tudi pričakovalo, saj oba algoritma poiščeta optimalno rešitev. Razlikujeta pa se po
+kar je tudi pričakovano, saj oba algoritma poiščeta optimalno rešitev. Razlikujeta pa se po
 razporeditvi trikotnikov. Pri zgornjem zgledu je 72 različnih razporeditev trikotnikov, ki podajo najmanjšo
-razdaljo oz. optimalno rešitev. Z uporabo greedy algoritma pa do optimalne rešitve nismo
-prišli. Velikost napake je cca $5,29\%$.
+razdaljo oz. optimalno rešitev. Z uporabo greedy algoritma do optimalne rešitve nismo
+prišli. Velikost napake je cca $5,29$ \%.
 
 \newpage
 \begin{thebibliography}{9}

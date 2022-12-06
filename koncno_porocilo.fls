@@ -710,12 +710,15 @@ INPUT koncno_porocilo.aux
 INPUT .\koncno_porocilo.out
 INPUT .\koncno_porocilo.out
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
+INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathex.enc
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-ec.enc
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-ts1.enc
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
+INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmex10.pfb
+INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmex10.pfb
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi12.pfb
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi12.pfb
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi8.pfb

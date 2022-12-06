@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.26)  6 DEC 2022 16:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.26)  6 DEC 2022 16:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -406,57 +406,57 @@ Overfull \hbox (5.2002pt too wide) in paragraph at lines 108--108
 <greedy.png, id=104, 478.03593pt x 94.10156pt>
 File: greedy.png Graphic file (type png)
 <use greedy.png>
-Package pdftex.def Info: greedy.png  used on input line 122.
+Package pdftex.def Info: greedy.png  used on input line 120.
 (pdftex.def)             Requested size: 369.88318pt x 85.36403pt.
 <primer_neoptimalnosti_greedy.png, id=105, 466.74374pt x 131.74219pt>
 File: primer_neoptimalnosti_greedy.png Graphic file (type png)
 <use primer_neoptimalnosti_greedy.png>
-Package pdftex.def Info: primer_neoptimalnosti_greedy.png  used on input line 127.
+Package pdftex.def Info: primer_neoptimalnosti_greedy.png  used on input line 125.
 (pdftex.def)             Requested size: 284.53522pt x 85.36201pt.
  [5 <./greedy.png> <./primer_neoptimalnosti_greedy.png>]
-Overfull \hbox (141.05026pt too wide) in paragraph at lines 150--150
+Overfull \hbox (141.05026pt too wide) in paragraph at lines 148--148
 []    \T1/lmtt/m/n/12 11.            lokalna_dolzina_urnika.append( dolzina_urnika(trikotniki_lokalno) )[] 
  []
 
 
-Overfull \hbox (116.35025pt too wide) in paragraph at lines 150--150
+Overfull \hbox (116.35025pt too wide) in paragraph at lines 148--148
 []    \T1/lmtt/m/n/12 12.        index = lokalna_dolzina_urnika.index( min(lokalna_dolzina_urnika) )[] 
  []
 
-
-Overfull \hbox (73.12523pt too wide) in paragraph at lines 176--176
+[6]
+Overfull \hbox (73.12523pt too wide) in paragraph at lines 204--204
 []    \T1/lmtt/m/n/12 10.        for j, e in enumerate(seznam_dolzin_trikotnikov[i+1:], i+1):[] 
  []
 
-[6] [7]
-<sim_brut.png, id=124, 402.5439pt x 123.5817pt>
+[7]
+<sim_brut.png, id=125, 402.5439pt x 123.5817pt>
 File: sim_brut.png Graphic file (type png)
 <use sim_brut.png>
-Package pdftex.def Info: sim_brut.png  used on input line 218.
+Package pdftex.def Info: sim_brut.png  used on input line 248.
 (pdftex.def)             Requested size: 402.54291pt x 123.58138pt.
 
-Overfull \hbox (12.54291pt too wide) in paragraph at lines 218--219
+Overfull \hbox (12.54291pt too wide) in paragraph at lines 248--249
 [] 
  []
 
-<sim_clp.png, id=125, 396.0396pt x 124.3044pt>
+<sim_clp.png, id=126, 396.0396pt x 124.3044pt>
 File: sim_clp.png Graphic file (type png)
 <use sim_clp.png>
-Package pdftex.def Info: sim_clp.png  used on input line 222.
+Package pdftex.def Info: sim_clp.png  used on input line 252.
 (pdftex.def)             Requested size: 396.03862pt x 124.30408pt.
 
-Overfull \hbox (6.03862pt too wide) in paragraph at lines 222--223
+Overfull \hbox (6.03862pt too wide) in paragraph at lines 252--253
 [] 
  []
 
 [8 <./sim_brut.png> <./sim_clp.png>]
-<sim_greedy.png, id=132, 389.5353pt x 114.9093pt>
+<sim_greedy.png, id=133, 389.5353pt x 114.9093pt>
 File: sim_greedy.png Graphic file (type png)
 <use sim_greedy.png>
-Package pdftex.def Info: sim_greedy.png  used on input line 226.
+Package pdftex.def Info: sim_greedy.png  used on input line 256.
 (pdftex.def)             Requested size: 389.53433pt x 114.90901pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--233
+Underfull \hbox (badness 10000) in paragraph at lines 256--263
 
  []
 
@@ -467,15 +467,15 @@ Package rerunfilecheck Info: File `koncno_porocilo.out' has not changed.
 Here is how much of TeX's memory you used:
  10945 strings out of 478582
  174538 string characters out of 2844816
- 471727 words of memory out of 3000000
+ 469727 words of memory out of 3000000
  28919 multiletter control sequences out of 15000+600000
  516089 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,5n,63p,428b,485s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on koncno_porocilo.pdf (9 pages, 245744 bytes).
+ 60i,9n,63p,539b,485s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
+Output written on koncno_porocilo.pdf (9 pages, 249076 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
+ 199 PDF objects out of 1000 (max. 8388607)
  27 named destinations out of 1000 (max. 500000)
  143 words of extra memory for PDF output out of 10000 (max. 10000000)
 

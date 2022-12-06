@@ -94,15 +94,15 @@ dolžine beleži v nov seznam. Ko pregleda vse permutacije, poišče \textbf{prv
     1.    Vhod: trikotniki
     2.    n = length(trikotniki)
     3.    dolzina_urnika = []
-        perutacije = permutations( [0, 1, ..., n-1] )
-        for i in permutacije
-            for j in 0:(n-1)
-                trikotnik["vrstni_red"][j] = permutacija[j]
-            dolzina_urnika.append( dolzina(trikotniki) )
-        index = dolzina_urnika.index( min(dolzina_urnika) )
-        for i in 0:(n-1)
-            trikotniki[i]["vrstni red"] = permutacije[index][i]
-        Izhod: trikotniki
+    4.    perutacije = permutations( [0, 1, ..., n-1] )
+    5.    for i in permutacije
+    6.          for j in 0:(n-1)
+    7.            trikotnik["vrstni_red"][j] = permutacija[j]
+    8.      dolzina_urnika.append( dolzina(trikotniki) )
+    9.    index = dolzina_urnika.index( min(dolzina_urnika) )
+    10.   for i in 0:(n-1)
+    11.     trikotniki[i]["vrstni red"] = permutacije[index][i]
+    12.   Izhod: trikotniki
 
 \end{verbatim}
 
@@ -130,21 +130,21 @@ $40$ časovnih enot, potem Greedy pokaže največ $60$ časovnih enot.
 
 \subsubsection{Psevdokoda}
 \begin{verbatim}
-    Vhod: trikotniki
-    n = length(trikotniki)
-    trikotniki_lokalno = dict()
-    for i in 0:(n-1)
-        trikotniki_lokalno[i] = trikotniki[i]
-        m = length(trikotniki_lokalno)
-        lokalna_dolzina_urnika = []
-        for j in 0:(m-1):
-            trikotniki_lokalno[i]["vrstni_red"] = j
-            *popravi_mesta_ostalim_trikotnikom
-            lokalna_dolzina_urnika.append( dolzina_urnika(trikotniki_lokalno) )
-        index = lokalna_dolzina_urnika.index( min(lokalna_dolzina_urnika) )
-        trikotniki_lokalno[i]["vrstni_red"] = index
-        *popravi_mesta_ostalim_trikotnikom
-    Izhod: trikotniki_lokalno
+    1.     Vhod: trikotniki
+    2.     n = length(trikotniki)
+    3.     trikotniki_lokalno = dict()
+    4.     for i in 0:(n-1)
+    5.         trikotniki_lokalno[i] = trikotniki[i]
+    6.         m = length(trikotniki_lokalno)
+    7.         lokalna_dolzina_urnika = []
+    8.         for j in 0:(m-1):
+    9.             trikotniki_lokalno[i]["vrstni_red"] = j
+    10.            *popravi_mesta_ostalim_trikotnikom
+    11.            lokalna_dolzina_urnika.append( dolzina_urnika(trikotniki_lokalno) )
+    12.        index = lokalna_dolzina_urnika.index( min(lokalna_dolzina_urnika) )
+    13.        trikotniki_lokalno[i]["vrstni_red"] = index
+    14.        *popravi_mesta_ostalim_trikotnikom
+    15.    Izhod: trikotniki_lokalno
 
 \end{verbatim}
 
@@ -157,21 +157,21 @@ Tukaj opisat popravi\_mesta...
 %\subsubsection{Opis algoritma}
 \subsubsection{Psevdokoda}
 \begin{verbatim}
-    Vhod: seznam_dolzin_trikotnikov
-    T = sum(seznam_dolzin_trikotnikov)
-    t = new_variable()
-    s = new_variable()
-    x = new_variable(binary = True)
-    set_objective(t, maximization = False)
-    for i, d in enumerate(seznam_dolzin_trikotnikov)
-        add_constraint(s[i] >= 0)
-        add_constraint(s[i] + d <= t)
-        for j, e in enumerate(seznam_dolzin_trikotnikov[i+1:], i+1):
-            m = min(d, e)
-            add_constraint(x[i, j]+x[j, i] = 1)
-            add_constraint(s[i] - s[j] >= m - T*x[j, i])
-            add_constraint(s[j] - s[i] >= m - T*x[i, j])
-    Izhod: seznam s
+    1.     Vhod: seznam_dolzin_trikotnikov
+    2.     T = sum(seznam_dolzin_trikotnikov)
+    3.     t = new_variable()
+    4.     s = new_variable()
+    5.     x = new_variable(binary = True)
+    6.     set_objective(t, maximization = False)
+    7.     for i, d in enumerate(seznam_dolzin_trikotnikov)
+    8.         add_constraint(s[i] >= 0)
+    9.         add_constraint(s[i] + d <= t)
+    10.        for j, e in enumerate(seznam_dolzin_trikotnikov[i+1:], i+1):
+    11.            m = min(d, e)
+    12.            add_constraint(x[i, j]+x[j, i] = 1)
+    13.            add_constraint(s[i] - s[j] >= m - T*x[j, i])
+    14.            add_constraint(s[j] - s[i] >= m - T*x[i, j])
+    15.     Izhod: seznam s
 \end{verbatim}
 v seznamu s so napisani položaji nog trikotnikov
 

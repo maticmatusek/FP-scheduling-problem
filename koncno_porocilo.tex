@@ -78,7 +78,7 @@ pomembnejšega opravila (večjega trikotnika), manj pomembno opravilo  izpustimo
 
 
 \section{Reševanje problema s pomočjo različnih algoritmov}
-V znanstvenem članku The triangle scheduling problem \cite{triangle} je za reševanje problema predlagan Greedy algoritem. Pred Greedy algoritmom, sva se odločila sprogramirati brute force algoritem, ki je nekoliko manj težaven, je pa zelo časovno zahteven. 
+V znanstvenem članku The triangle scheduling problem \cite{triangle} je za reševanje problema predlagan Greedy algoritem. Pred Greedy algoritmom sva se odločila sprogramirati brute force algoritem, ki je nekoliko manj težaven, je pa precej časovno zahteven. 
 Nato sva napisala Greedy algoritem, ki ima nizko časovno zahtevnost vendar ne vrne optimalnega rezultata. Ker Greedy algoritem ne vrne optimuma, sva za konec napisala tudi optimalen algoritem, kjer sva uporabila celoštevilsko linearno programiranje, ki je manj časovno zahteven kot brute force.
 
 
@@ -87,7 +87,7 @@ Nato sva napisala Greedy algoritem, ki ima nizko časovno zahtevnost vendar ne v
 Imamo slovar z n trikotniki in seznam, sestavljen s $n!$ podseznami dolžine n
 (vse možne permutacije vrstnega reda trikotnikov). Potem za vsako permutacijo izračuna dolžino urnika in 
 dolžine beleži v nov seznam. Ko pregleda vse permutacije, poišče \textbf{prvo} možno permutacijo, ki vrne optimalno rešitev
-(minimalno dožino v seznamu vseh dolžin) in jo vzame za rešitev.
+(minimalno dolžino v seznamu vseh dolžin) in jo vzame za rešitev.
 
 \subsubsection{Psevdokoda}
 \begin{verbatim}
@@ -112,15 +112,15 @@ dolžine beleži v nov seznam. Ko pregleda vse permutacije, poišče \textbf{prv
 \subsection{Greedy algoritem}
 \subsubsection{Opis algoritma}
 Greedy algoritem je kateri koli algoritem, ki rešuje problem tako, da na vsakem koraku naredi lokalno optimalno izbiro.
-Greedy algoritem najprej razvrsti trikotnike tako, da velja \newline
+Greedy algoritem najprej razvrsti trikotnike tako, da velja 
 $d_1 \geq d_2 \geq d_3 \geq ... \geq d_n$. Prvi trikotnik razvrsti na $x=0$, kar ustvari prostor pod trikotnikom 1.
-Nato vsak trikotnik $j=2,...,n$ postavi v največji možen prostor pod že postavljenimi trikotniki. Če je več enakih prostorov, izbere prvega povrsti.
+Nato vsak trikotnik $j=2,...,n$ postavi na mesto, kjer je dolžina že postavljenih trikotnikov najkrajša. Če je več enakih prostorov, izbere prvega povrsti.
 Če ima izbrani prostor pod trikotnikom dolžino $l$ in se začne v času $x_i$, potem je trikotnik $j$ postavljen na mesto $x_j=x_i+d_j$. Če je $2d_j \ge l$,  potem se vsi trikotniki $k$, za katere je $x_k \ge x_j$ zamaknejo za $ 2d_j-l$, da se ne prekrivajo. Opisano 
-dogajanje prikazuje spodnji primer($x=l, p_i = d_i $).
+dogajanje prikazuje spodnji primer, kjer je $x=l$ in $ p_i = d_i $.
 \begin{center}
     \includegraphics[width=13cm, height=3cm]{greedy.png} 
  \end{center}
-Pri številnih problemih Greedy algoritem ne poišče optimalne rešitve, nič drugače ni pri našem problemu.
+Pri številnih problemih Greedy algoritem ne poišče optimalne rešitve in nič drugače ni pri našem problemu.
 Na naslednji sliki prikažemo primer, ko Greedy ni optimalen. Greedy algoritem (desna slika) vrne dolzino 42 in ne vrne optimalne dolžine, ki je 40 (leva slika).
 \begin{center}
     \includegraphics[width=10cm, height=3cm]{primer_neoptimalnosti_greedy.png} 
@@ -149,7 +149,7 @@ $40$ časovnih enot, potem Greedy pokaže največ $60$ časovnih enot.
 \end{verbatim}
 
 
-Tukaj opisat popravi\_mesta...
+Funkcija popravi\_mesta\_ostalim\_trikotnikom nastavi mesta tistih trikotnikov, ki so v slovarju trikotniki\_lokalno, tako da so še vedno urejeni po vrsti in noben izmed trikotnikov ni na istem mestu.
 
 %\subsubsection{Predsatvitev rezultatov}
 

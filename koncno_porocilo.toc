@@ -1,4 +1,4 @@
-\babel@toc {slovene}{}
+\babel@toc {slovene}{}\relax 
 \contentsline {section}{\numberline {1}Uvod}{3}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Navodilo naloge}{3}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Uporabnost}{3}{subsection.1.2}%
